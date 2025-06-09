@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calligrafia</title>
+        <link rel="stylesheet" href="../style.css" id="style-theme">
+    </head>
+    <body class="body">
+        <div class="navbar">
+            <div class="islanav">
+                <button class="nav-link"  onclick="changeMode()">
+                    <img src="../img/home/mezzaluna1.svg" alt="Dark mode toggle" style="width: 20px; height: 20px;">
+                </button>
+            </div>
+            <div class="islanav">
+                <div></div>
+                <div class="dropdown">
+                    <a href="/" class="nav-link">Home</a>
+                    <div class="dropdown-content">
+                        <a href="/#editoriale" class="dropdown-item">La memoria del visibile: segno, colore, ritmo e calligrafie</a>
+                        <a href="/#magazine" class="dropdown-item">Il magazine</a>
+                        <a href="/#crediti" class="dropdown-item">Crediti e informazioni</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="/pagine/biografia.html" class="nav-link">Biografia</a>
+                    <div class="dropdown-content">
+                        <a href="/pagine/biografia.html#note-curatori" class="dropdown-item">Note dei curatori</a>
+                        <a href="/pagine/biografia.html#linea-tempo" class="dropdown-item">Linea del tempo</a>
+                        <a href="/pagine/biografia.html#liberta-londinese" class="dropdown-item">La libertà londinese. L'asse Milano-Londra come paradigma di modernità.</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="/pagine/grafica.html" class="nav-link">Grafica</a>
+                    <div class="dropdown-content">
+                        <a href="/pagine/grafica.html#graphic-designer" class="dropdown-item">Simonetta Ferrante graphic designer: costruzione compositiva, creatività e fantasia</a>
+                        <a href="/pagine/grafica.html#progetto-corrispondenza" class="dropdown-item">Il progetto della corrispondenza</a>
+                    </div>
+                </div>
+                <a href="/pagine/pittura.html" class="nav-link">Pittura</a>
+                <div class="dropdown">
+                    <a href="/pagine/calligrafia.html" class="nav-link">Calligrafia</a>
+                    <div class="dropdown-content">
+                        <a href="/pagine/calligrafia.html#scrittura-astratta" class="dropdown-item">La scrittura astratta di Simonetta Ferrante</a>
+                        <a href="/pagine/calligrafia.html#paesaggio-frammenti" class="dropdown-item">Un paesaggio di frammenti calligrafici</a>
+                        <a href="/pagine/calligrafia.html#paesaggi-calligrafici" class="dropdown-item">Paesaggi calligrafici. Una delicata danza di lettere</a>
+                    </div>
+                </div>
+                <a href="/pagine/intervista.html" class="nav-link">Intervista</a>
+                <div></div>
+            </div>
+        </div>
+        <div class="container_carousel" style="margin-top: 120px;">
+            <section class="carousel">
+                <p id="carousel-counter" class="carousel-counter">1 / 4</p>
+                <div class="control left-control">
+                    <button id="prev-btn" onclick="scrollToItem(currentItem - 1);">
+                        <!-- Ho incollato un'immagine svg come icona previous -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                          <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/>
+                        </svg>
+                      </button>
+                </div>
+                <div class="control right-control">
+                    <button id="next-btn" onclick="scrollToItem(currentItem + 1);">
+                        <!-- Ho incollato un'immagine svg come icona next -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="bullet-container" class="bullet-container">
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                </div>
+                <ul id="carousel-list" class="carousel-list">
+                    <li class="carousel-item">
+                        <img src="../img/calligrafia/Lasciti della mano (1998).jpeg"/>
+                        <div class="carousel-caption">Lasciti della mano, 1998</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/home/foto_1.png"/>
+                        <div class="carousel-caption">La gioia di scrivere (da un verso di Wislawa Szymborska), 2012</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/calligrafia/Lasciti della mano (1998) 2.jpeg"/>
+                        <div class="carousel-caption">Lasciti della mano, 1998</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/calligrafia/Lasciti della mano (1998) 3.jpeg"/>
+                        <div class="carousel-caption">Lasciti della mano, 1998</div>
+                    </li>
+                    
+                    <li class="carousel-item">
+                        <img src="../img/calligrafia/Japan (2008-2012) 1.jpeg"/>
+                        <div class="carousel-caption">Japan, 2008-2012</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/calligrafia/Japan (2008-2012) 4.jpeg"/>
+                        <div class="carousel-caption">Japan, 2008-2012</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/calligrafia/Mar absoluto (2001).jpeg"/>
+                        <div class="carousel-caption">Mar absoluto, 2001</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/calligrafia/Alberi fermi (2007).jpeg"/>
+                        <div class="carousel-caption">Alberi fermi, 2007</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/calligrafia/Il solco del pennino (2004).jpeg"/>
+                        <div class="carousel-caption">Il solco del pennino, 2004</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/calligrafia/Il solco del pennino (2004) 1.jpeg"/>
+                        <div class="carousel-caption">Il solco del pennino, 2004</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/calligrafia/L'astra N1 (1995).jpeg"/>
+                        <div class="carousel-caption">L'astra N1, 1995</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/calligrafia/Euforia (2009) 1.jpeg"/>
+                        <div class="carousel-caption">Euforia, 2009</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/calligrafia/Messaggi dai contintenti (2007-2008.jpeg"/>
+                        <div class="carousel-caption">Messaggi dai continenti, 2007-2008</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/calligrafia/Rubando da Bach, largo ma non dietetico (1995).jpeg"/>
+                        <div class="carousel-caption">Rubando da Bach, largo ma non dietetico (1995)</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/calligrafia/Omaggio a Chillida (2011).jpeg"/>
+                        <div class="carousel-caption">Omaggio a Chillida, 2011</div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <script src="../script.js"></script>
+        <div class="container">
+            <div class="container_capitolo">   
+               <div class="sottotitolo">
+               <h2 id="scrittura-astratta">La scrittura astratta di Simonetta Ferrante</h2>
+                   <h3>a cura di Francesca Biasetton</h3>
+                </div>        
+                    <p>Il gesto dello scrivere a mano presuppone e contiene una sua indubbia fisicità: 
+                        la mano impugna lo strumento scrittorio, si muove nello spazio e sul supporto 
+                        (cartaceo e non); il contatto crea un attrito, produce suoni e rumori - il fruscio
+                        della matita, lo scricchiolio del pennino, lo "squittio" di certi pennarelli, 
+                        lo stridere del gesso sulla lavagna. Tutti questi fattori, insieme all'individualità
+                        di chi scrive, la rendono unica, differenziandola dalla scrittura con tastiera.
+                        <br>La calligrafia si differenzia dalla scrittura in quanto pratica dello scrivere fine a se stesso, 
+                        con una particolare attenzione alla qualità delle forme, come dice il termine stesso, dal greco nañós, 
+                        kalós, "belo", e yeacia, graphia, "scrittura".
+                        L'idea più diffusa, quando si nomina la calligrafia, il riferimento immediato, 
+                        nella maggior parte dei casi, è il Medioevo - pergamene polverose e capilettera miniati, 
+                        e improbabili penne d'oca. Nella pratica i professionisti della calligrafia preparano 
+                        la penna d'oca liberandola della parte "romantica", che crea solo impiccio al gesto dello scrivere.</br>
+                        Un altro equivoco comune è quello che vuole la calligrafia appartenere al mondo orientale, con il fascino 
+                        esotico che richiama questo riferimento geografico e culturale. Segni che risultano incomprensibili per chi 
+                        non li conosce, quindi segni astratti, e non testi, composti con le lettere degli alfabeti cinese, giapponese, 
+                        arabo esercitano/creano speso una facile e banale attrattiva.
+                        Un testo scritto, per esempio, in calligrafia cinese, utilizzando segni (ideogrammi) non decifrabili/riconducibili 
+                        a un valore semantico per chi non h a studiato la lingua cinese, viene quindi apprezzato come immagine, svincolando 
+                        il testo stesso dal suo contenuto.
+                        <br>Una condizione simile si verifica nelle applicazioni contemporanee della calligrafia, in ambito artistico, 
+                        dove le lettere vengono interpretate e variate, perdendo leggibilità e diventando segno. Nonostante questa idea comune, 
+                        nel mondo occidentale la calligrafia ha goduto, e gode ancora oggi, sull'onda di un nuovo revival, di notevoli sviluppi 
+                        sia nella grafica sia nell'arte. Sono ampie le applicazioni commerciali contemporanee: dai logotipi ai titoli per libri 
+                        e film, headlines per campagne pubblicitarie alla realizzazione di diplomi e biglietti di invito, partecipazioni e 
+                        personalizzazione di buste.</br>
+                        Ed è nel campo della grafica pubblicitaria che troviamo, per via della sua formazione e pratica in questa professione, 
+                        un primo rapporto di Simonetta Ferrante con il testo atto a veicolare un messaggio, a comunicare. Ma, parallelmente al 
+                        corso di grafica, a Londra Simonetta Ferrante coltiva il suo interesse per l'arte, frequentando corsi di disegno e pittura, 
+                        approfondendo l'attenzione nei confronti delle immagini.
+                        <br>L'inesauribile energia e inarrestabile curiosità di Simonetta Ferrante la portano, all'inizio degli anni novanta, a 
+                        impegnarsi in prima persona con l'apertura del Centro dell'Immagine e dell'Espressione, vera fucina creativa che spazia tra 
+                        le arti figurative attraverso corsi, laboratori, incontri.
+                        L'antenna vigile di Simonetta Ferrante sarà all'origine del fortunato incontro con Anna Ronchi, rientrata dai suoi studi 
+                        calligrafici preso il Roehampton Institute di Londra. Questa magica combinazione farà sì che il Centro diventi la prima 
+                        sede dei corsi della neonata ACI - Associazione Calligrafica Italiana. Simonetta Ferrante, che grazie ai suoi studi in 
+                        Inghilterra già conosce l'esistenza dell'arte della calligrafia, inizia così ad approfondire questa disciplina. 
+                        Il percorso di apprendimento della calligrafia può essere paragonato allo studio della musica, che richiede continui e 
+                        ripetuti esercizi per acquisire una tecnica e nel rispetto delle regole che solo in un secondo tempo possono essere reinterpretate.</br>
+                        Simonetta Ferrante conosce bene lo studio e la disciplina della musica: nella sua formazione, infatti, è presente anche lo studio del pianoforte, 
+                        con l'ottenimento del diploma presso il conservatorio Giuseppe Verdi di Milano.
+                        Lo studio delle scritture formali, degli alfabeti storici che fanno parte della nostra storia, comporta apprenderne le regole 
+                        di esecuzione attraverso la ripetizione e l'esercizio, per poterli riprodurre. E una volta acquisita la conoscenza e 
+                        interiorizzate le forme è possibile apportare le proprie variazioni. Variazioni che vengono create in un processo di 
+                        astrazione che è possibile generare in modi diversi - a partire dalla velocità, con la creazione di nuovi ductus; o dalla musica, 
+                        seguendo ritmi e tonalità; o da un diverso rapporto con il testo, in particolare il testo poetico. Variazioni dunque che interessano 
+                        la forma, il peso, il ritmo delle lettere. Queste nuove forme, queste nuove scritture, non più leggibili, trasmettono un nuovo sentire: 
+                        la soglia della leggibilità si sposta, abbassandosi. È attraverso queste variazioni che il testo, non più decifrabile, passa dal segno 
+                        lettera al segno immagine. Quindi, abbassando la soglia della leggibilità, lasciandone alla tipografia il compito, la calligrafia diventa 
+                        interpretazione del testo.
+                        <br>Infatti, a differenza di un alfabeto tipografico, che è il risultato di un progetto, in cui una serie di elementi deve funzionare 
+                        in ogni possibile combinazione, la calligrafia è composta di segni autosufficienti, parole e/o frasi, alfabeti incompiuti, particolari 
+                        combinazioni di lettere utilizzate in un contesto specifico.</br>
+                        Già la scuola tedesca, nei primi anni del Novecento, aveva iniziato un processo di allontanamento della calligrafia formale dalle 
+                        forme codificate delle scritture storiche e dai formalismi della scuola inglese. Con artisti come Friedrich Poppl, Ernst Schneider, 
+                        Rudo Spemann e Rudolf Koch la scrittura si sposta verso la rappresentazione/interpretazione, verso l'astrazione, allontanandosi dalla leggibilità.
+                        È una nuova forma di rapporto con il testo, presente nel percorso artistico che Simonetta Ferrante intraprende verso/nell'arte, con riferimento 
+                        alla poesia, già presente nelle sue opere ispirate alle poesie di Alda Merini e Cecilia Meireles: i segni sula carta, sulla tela, diventano 
+                        trascrizione del ritmo e interpretazione della testo poetico.
+                        <br>Come la musica, la calligrafia richiede l'acquisizione della tecnica e delle regole che solo in un secondo tempo possono essere reinterpretate. 
+                        E anche la musica, come la scrittura/calligrafia, propone ritmi, movimenti, suoni - e pause. Perché il silenzio, la pausa, è importante in musica, 
+                        come lo spazio in cui i segni lettera sono tracciati, e che a loro volta creano. E Simonetta Ferrante dimostra di conoscere i rapporti tra ritmo/pausa/tono che, 
+                        come nella musica, anche nella calligrafia hanno tanta importanza.</br>
+                        Il nuovo rapporto con l'alfabeto andrà quindi a incontrare altri saperi con cui Simonetta Ferrante si esprime, rivelandosi nell'incontro con quella che è la 
+                        sua produzione artistica, trovando un posto nei suoi monotipi, nei suoi collage, nei suoi libri d'artista.
+                        Decisivi per Simonetta Ferrante gli incontri con tre artisti, Hans Joachim Burgert, Thomas Ingmire e Brody Neuenschwander, di pura formazione calligrafica, 
+                        che di questa disciplina hanno fatto un'arte che si esprime al di là della semplice riproduzione del testo, ma interferisce con esso attraverso segni che 
+                        sono memoria delle lettere, e con l'utilizzo di varie tecniche che inducono la pittura, il collage e la scrittura stessa.
+                        In questo testo immagine ritroviamo la traccia del gesto compiuto dalla mano: energia, movimento, scrittura. Il cerchio si chiude, ma non completamente: 
+                        nel caso di Simonetta Ferrante è una forma aperta, dinamica, che continua a creare nuove forme e un nuovo percorso.
+                    </p>
+                <div class="sottotitolo">
+                <h2 id="paesaggio-frammenti">Un paesaggio di<br>frammenti calligrafici</br></h2>
+                    <h3>a cura di Brody Neuenschwander</h3>
+                    <h5 style="text-align: center; font-size: 15pt; padding-top: 15px">traduzione di Cristina Pradella</h5>
+                </div>        
+                    <p>Simonetta Ferrante scrive mondi, descrive atmosfere e crea alfabeti indecifrabili 
+                        di emozioni. Le sue opere sono affermazioni monumentali di movimento ed energia, 
+                        raramente monumentali nella scala, che emergono dall'amore per la linea in tutte 
+                        le sue forme, energie ed espressioni.
+                        <br>Conosco l'artista da molti anni. Abbiamo discusso della sua opera e del suo aspetto
+                        calligrafico, giungendo speso alla medesima conclusione: il mondo occidentale dimostra 
+                        poca comprensione e poco apprezzamento del tratto calligrafico, soprattutto se ne 
+                        paragoniamo l'atteggiamento a quello dei nostri amici in Cina e Giappone. Qual è la causa 
+                        di un approccio così diverso? Non esiste una risposta esplicita, ma posso proporre diversi 
+                        percorsi per affrontare il problema.
+                        Rispetto al ruolo della scrittura nel mondo occidentale, quello della calligrafia nella 
+                        cultura cinese e storicamente molto diverso: per oltre 150 anni è stata la forma d'arte 
+                        principale in Cina e Giappone. I mandarini dell'imperatore erano amministratori colti e 
+                        al contempo poeti-calligrafi. L'artista calligrafo nel mondo orientale era un membro dell'élite, 
+                        con una conoscenza raffinata dei classici della letteratura e una mano estremamente addestrata.
+                        Il quadro in Occidente è completamente diverso. Ai tempi degli antichi Romani, i libri erano 
+                        scritti dagli schiavi utilizzando l e pratiche lettere semplici sviluppate dal mercanti fenici. 
+                        I libri del primo Medioevo erano prodotti dai monaci, che non erano mai incoraggiati a esprimersi 
+                        utilizzando le lettere con cui copiavano la Bibbia. In epoche più tarde i libri erano realizzati 
+                        da scribi professionisti e poi da stampatori, tutti per il mercato libero. L'attività di scrivere 
+                        in Occidente era funzionale, realizzata solamente per scopi remunerativi e in nessun modo considerata 
+                        come strumento di espressione personale.</br>
+                        L'arte di dipingere ha sempre goduto di maggiore prestigio in Occidente. E qui incontriamo un'altra 
+                        differenza molto interessante rispetto alla Cina. Mentre, infatti, la pittura cinese nasce dalla calligrafia, 
+                        in cui un segno rimane un'asserzione chiara su uno sfondo bianco, la pittura in Occidente non è basata 
+                        sul segno o sul gesto isolato, individuale. Certo, nelle opere di Rubens e Tiziano la pennellata può diventare 
+                        segno assertivo, audace e individuale, e i gesti si possono liberare in qualche modo dal vortice di colore 
+                        in cui vivono e, in una fotografia ingrandita, diventano affermazioni calligrafiche di grande bellezza. 
+                        Ma non è questa la loro funzione. Il gesto nella pennellata di Tiziano descrive un oggetto e da movimento 
+                        ed espressione alla rappresentazione. Sebbene lo stesso potrebbe dirsi di molti tratti di pennello nella 
+                        pittura cinese, il fatto che questi segni e questi gesti siano realizzati in inchiostro nero o grigio su 
+                        fondo bianco permette loro di mantenere la propria identità come pennellata isolata. La pittura cinese si 
+                        concentra sul segno e sul movimento usato per realizzarla. La pittura occidentale rappresenta ed esprime 
+                        il mondo visivo. L'Occidente non ha una calligrafia indipendente.
+                        <br>Questo elemento inconfutabile dello sviluppo storico implica che l'occhio occidentale non è stato addestrato, 
+                        fino a un'epoca recente, a comprendere il gesto come affermazione espressiva indipendente. Il XX secolo ha visto 
+                        l'introduzione di questo concetto nella produzione artistica e nella ricezione occidentali a partire 
+                        dall'Impressionismo, per trovare poi pieno sviluppo nell'opera di Jackson Pollock, Robert Motherwel, 
+                        Antoni Tapies, Cy Twombly e altri.</br>
+                        Simonetta Ferrante si è mossa entro questo spazio calligrafico per la maggior parte della sua carriera. 
+                        I suoi quadri degli anni novanta mostrano una tensione dinamica tra i processi di dipingere e disegnare. 
+                        Le zone di colore sono ridisegnate come motivo lineare, sono trasformate da campo cromatico a ritmo calligrafico.
+                        <br>A un certo punto della sua vicenda artistica Simonetta Ferrante seguì numerosi corsi di calligrafia tradizionale. 
+                        Sebbene non avesse mai progettato di diventare una calligrafa nel senso occidentale della definizione, queste lezioni 
+                        si dimostrarono di grande valore. Raramente troviamo testi leggibili nei suoi dipinti calligrafici, nelle incisioni 
+                        e nei monotipi. Ma i suoi studi calligrafici hanno dato vita a una varietà di forme lineari e strategie più ricca 
+                        rispetto a quella che sarebbe stata possibile se si fosse limitata esclusivamente a processi automatici di disegno. 
+                        Ferrante scrive parole utilizzando la sequenza di lettere e segni usati per formare lettere allo scopo di produrre un insieme grafico. 
+                        In un certo senso le parole sono la sua natura morta, da realizzare in inchiostro instillando quanta più libertà ed emozione 
+                        riesce a raccogliere. Una calligrafia incomprensibile che poggia su una base di parole: un esito che potrebbe risultare un 
+                        dilemma per i fruitori occidentali. Ma le astrazioni potenti di Franz Kline sono costruite sulle sue osservazioni di 
+                        una sedia. La maestosa calligrafia astratta degli artisti contemporanei giapponesi si può sei pre far risalire ai 
+                        caratteri cinesi, E Cy Twombly si muove con frustrazione palese dalla leggibilità alla realizzazione del segno, 
+                        dal colore alla linea, dalla rappresentazione al puro gesto. Questo parrebbe essere il terreno del calligrafo moderno. 
+                        Il linguaggio funzionale è ormai il regno del tipografo. La calligrafia ai nostri giorni è un'espressione corporea, 
+                        un movimento della mano, del braccio, del corpo intero, catturato da pittura e inchiostro nel tempo e nello spazio.</br>
+                    </p>
+                <div class="sottotitolo">
+                    <h2 id="paesaggi-calligrafici">Paesaggi calligrafici.<br>Una delicata</br>danza di lettere.</h2>
+                    <h3>a cura di Suresh Sethi</h3>
+                    <h5 style="text-align: center; font-size: 15pt; padding-top: 15px">traduzione di Cristina Pradella</h5>
+                    <p>Simonetta è un'anima libera; il suo spirito inquieto l'ha portata in terre remote: Giappone, Cina, India. Brasile, 
+                        Argentina...lontano da Milano, Ia sua ancora, dove lavora nel proprio studio per riportare in vita le immagini dei 
+                        suoi viaggi, il profumo delle sue memorie, il canto dei monaci buddisti e i sogni del suo vagare futuro. L'irrequietezza 
+                        è così presente nel suo spirito, quasi come un bambino, e tuttavia il suo controllo dei colori sulle calligrafia e la 
+                        sua pura passione nel dipingere sono visibili nell'opera artistica, espressione dell'idillio con il mondo che le è tanto 
+                        caro; nelle sue creazioni fa sì che la calligrafia canti lo spazio. Simonetta non è mai dentro le teorie dell'arte, dell'analisi.
+                        Da un punto di vista lirico è in grado di imbrigliare le immagini fugaci, i suoi viaggi, i suoi sogni, strati di realtà e luoghi 
+                        distanti come collage, mai distinti, mai uniti. I suoi collage sono pareti milanesi stratificate di frammenti che porta con sé da 
+                        terre remote. I suoi collage sono realizzati attraverso la distruzione del suo mondo, dei suoi viaggi, delle amicizie profonde, 
+                        eppure lei rifugge da un'emotività eccessiva. I suoi collage sono sempre materia vivo. Sono un'espressione vivente, cantante, 
+                        crescente di amore e di gioia. Sono l'armonia del suo mondo interiore - la sua pace nel mondo caotico di cui fa parte. 
+                        Quando sai quello che vuoi fare, il caos scompare.
+                        <br>Ho incontrato per la prima volta Simonetta nella sua casa in via Moscova - era il mio primo giorno a Milano. Le dovevo 
+                        consegnare un pacco da parte di un suo amico in India. Quando aprì la porta della sua abitazione mi accolse con un caldo benvenuto
+                        - e subito mi fece sentire a casa. Amavo la parete nel suo soggiorno che era piena di dipinti - vibranti, colorati, gioiosi. Mi 
+                        trovavo in una casa d'arte - nella città del design. Avevo conosciuto un'artista che era anche una graphic designer. Fu una serata 
+                        memorabile, ma allora on potevo di certo sapere che quella sera sarei diventato una parte della sua famiglia allargata, e che 
+                        avremmo continuato a vederci anno dopo anno, a Milano, in India e a Singapore.</br>
+                        Il 1984 fu un anno eccitante per il design milanese - proprio nel mezzo della mania per il Gruppo Memphis. Ero venuto da 
+                        Bombay alla Domus Academy per studiare - per partecipare alla cultura italiana del design. La casa di Simonetta divenne un 
+                        punto fermo: vi incontravo designer, fotografi e artisti. Erano bei tempi, quelli: mi invitava a casa sua quasi tutti i 
+                        fine settimana e un venerdì sera mi sorprese quando mi chiese di cucinare il curry indiano per i suoi ospiti - non ero certo 
+                        di quello che sarei riuscito a fare, ma la sua energia e la sua fiducia fecero rivivere i profumi indiani a Milano.
+                        A quel tempo Simonetta organizzava laboratori artistici nel suo studio e partecipai ad alcuni di questi. 
+                        <br>Mi diceva: "Lavora rapidamente: fai il maggior numero possibile di schizzi delle relazioni astratte. Le relazioni astratte 
+                        esprimono il rapporto delle parti con il tutto. L'atto di guardare la forma richiede un genere di pazienza che va oltre 
+                        la semplice visione, lo scorgerla con la coda dell'occhio. Richiede un'esplorazione globale, che accarezza le forme. Procedi 
+                        seguendo l'intuito, percependo letteralmente il tuo percorso nelle forme, nei piani e nei sentieri del movimento per tutto 
+                        quello che apprezzi".</br>
+                        I suoi paesaggi in quegli anni avevano questo bisogno pressante; e lo si può letteralmente percepire in Paesaggio toscano (1985). 
+                        In Mar Absoluto (2001) il mare verde giada bagna dolcemente una fila di lettere, con le onde che le coprono delicatamente, 
+                        pacificamente. Potrei vivere con questa opera d'arte incantevole, ammirando quotidianamente la magica marina di Simonetta, 
+                        che fa rotolare, culla e guida le lettere oltre le profondità verde giada, quelle lettere che danzano sulle onde accendendo 
+                        una propria sinfonia.
+                        <br>La quantità di cose, eventi e luoghi che potrebbero essere individuati nell'opera di Simonetta è così straripante che 
+                        nel suo nuovo collage, Messaggi dalla notte trasparente (2015), su plexiglass, cancella la visibilità per opporre opacità, 
+                        densità e peso della materia, saturazione dei colori, a leggerezza, luminosità e trasparenza - nello stile di Calvino crea 
+                        Le collage invisible. Il risultato è una serie di collage illuminati dalla luce e poetici che possono essere visti da entrambi 
+                        i lati - guardando attraverso la trasparenza, gli strati dello sfondo, la molteplicità delle cose che compongono l'opera d'arte 
+                        definitiva. Trascende il futuro e il passato allo stesso tempo ed è diventata una con il presente. Le lettere nello spazio 
+                        danzano delicatamente nel ricco strato di trasparenza, vuoto, ambiente, e nel suo potenziale, come il collage che deve ancora 
+                        vedere la luce.</br>
+                    </p>
+            </div> 
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#" class="back-to-top">Torna su</a>
+            <a href="../magazine.pdf" class="pdf-link" target="_blank">Scarica il magazine</a>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

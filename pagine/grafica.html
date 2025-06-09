@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grafica</title>
+        <link rel="stylesheet" href="../style.css" id="style-theme">
+    </head>
+    <body class="body">
+        <div class="navbar">
+            <div class="islanav">
+                <button class="nav-link"  onclick="changeMode()">
+                    <img src="../img/home/mezzaluna1.svg" alt="Dark mode toggle" style="width: 20px; height: 20px;">
+                </button>
+            </div>
+            <div class="islanav">
+                <div></div>
+                <div class="dropdown">
+                    <a href="/" class="nav-link">Home</a>
+                    <div class="dropdown-content">
+                        <a href="/#editoriale" class="dropdown-item">La memoria del visibile: segno, colore, ritmo e calligrafie</a>
+                        <a href="/#magazine" class="dropdown-item">Il magazine</a>
+                        <a href="/#crediti" class="dropdown-item">Crediti e informazioni</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="/pagine/biografia.html" class="nav-link">Biografia</a>
+                    <div class="dropdown-content">
+                        <a href="/pagine/biografia.html#note-curatori" class="dropdown-item">Note dei curatori</a>
+                        <a href="/pagine/biografia.html#linea-tempo" class="dropdown-item">Linea del tempo</a>
+                        <a href="/pagine/biografia.html#liberta-londinese" class="dropdown-item">La libertà londinese. L'asse Milano-Londra come paradigma di modernità.</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="/pagine/grafica.html" class="nav-link">Grafica</a>
+                    <div class="dropdown-content">
+                        <a href="/pagine/grafica.html#graphic-designer" class="dropdown-item">Simonetta Ferrante graphic designer: costruzione compositiva,<br>creatività e fantasia</br></a>
+                        <a href="/pagine/grafica.html#progetto-corrispondenza" class="dropdown-item">Il progetto della corrispondenza</a>
+                    </div>
+                </div>
+                <a href="/pagine/pittura.html" class="nav-link">Pittura</a>
+                <div class="dropdown">
+                    <a href="/pagine/calligrafia.html" class="nav-link">Calligrafia</a>
+                    <div class="dropdown-content">
+                        <a href="/pagine/calligrafia.html#scrittura-astratta" class="dropdown-item">La scrittura astratta di Simonetta Ferrante</a>
+                        <a href="/pagine/calligrafia.html#paesaggio-frammenti" class="dropdown-item">Un paesaggio di frammenti calligrafici</a>
+                        <a href="/pagine/calligrafia.html#paesaggi-calligrafici" class="dropdown-item">Paesaggi calligrafici. Una delicata danza di lettere</a>
+                    </div>
+                </div>
+                <a href="/pagine/intervista.html" class="nav-link">Intervista</a>
+                <div></div>
+            </div>
+        </div>
+        <div class="container_carousel" style="margin-top: 120px;">
+            <section class="carousel">
+                <p id="carousel-counter" class="carousel-counter">1 / 4</p>
+                <div class="control left-control">
+                    <button id="prev-btn" onclick="scrollToItem(currentItem - 1);">
+                        <!-- Ho incollato un'immagine svg come icona previous -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                          <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/>
+                        </svg>
+                      </button>
+                </div>
+                <div class="control right-control">
+                    <button id="next-btn" onclick="scrollToItem(currentItem + 1);">
+                        <!-- Ho incollato un'immagine svg come icona next -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="bullet-container" class="bullet-container">
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                </div>
+                <ul id="carousel-list" class="carousel-list">
+                    <li class="carousel-item">
+                        <img src="../img/grafica/Il.fiammifero.jpeg"/>
+                        <div class="carousel-caption">Il fiammifero (Simonetta Ferrante e Gianni Rossi, 1969)<br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/grafica/Il.fiammifero1.jpeg"/>
+                        <div class="carousel-caption">Il fiammifero (Simonetta Ferrante e Gianni Rossi, 1969)<br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/grafica/Il.fiammifero2.jpeg"/>
+                        <div class="carousel-caption">Il fiammifero (Simonetta Ferrante e Gianni Rossi, 1969)<br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/grafica/Il.fiammifero3.jpeg"/>
+                        <div class="carousel-caption">Il fiammifero (Simonetta Ferrante e Gianni Rossi, 1969)<br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/grafica/annunci.pubbl.Data.Control.jpeg"/>
+                        <div class="carousel-caption">Annunci pubblicitari Data Control (1971)<br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/grafica/sovracoperta.LaFormulaDell'Immortalità.jpeg"/>
+                        <div class="carousel-caption">Sovracoperta del volume "La Formula dell'Immortalità" (1963)<br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/grafica/biglietto.auguri.H.Rubinstein.jpeg"/>
+                        <div class="carousel-caption">Biglietto d'auguri per Helena Rubenstein (1971)<br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/grafica/biglietto.auguri.H.Rubinstein1.jpeg"/>
+                        <div class="carousel-caption">Biglietto d'auguri per Helena Rubenstein (1971)<br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/grafica/cartoncini.farmitalia.jpeg"/>
+                        <div class="carousel-caption">Cartoncino pubblicitario Farmitalia (1959)<br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/grafica/cartoncin.farmitalia1.jpeg"/>
+                        <div class="carousel-caption">Cartoncino pubblicitario Farmitalia (1959)<br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/grafica/cartoncini.farmitalia 2.jpeg"/>
+                        <div class="carousel-caption">Cartoncino pubblicitario Farmitalia (1959)<br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/grafica/elefante.jpeg"/>
+                        <div class="carousel-caption">Disegno per calendario, cartolina, IGAP e CLAMOR (1961-1963)<br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/grafica/locandina.esselunga.jpeg">
+                        <div class="carousel-caption">Locandina Esslunga (1967)<br>Fotografia di Serge Libiszewski</br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="container">
+            <div class="container_capitolo">
+                <div class="sottotitolo" id="graphic-designer">
+                    <h2>Simonetta Ferrante graphic designer: costruzione compositiva,<br>creatività e fantasia</br></h2>
+                   <h3>a cura di Nicoletta Ossanna Cavadini</h3>
+                 </div>        
+                    <p>Simonetta Ferrante è stata la prima assistente di Bob Noorda nel suo studio di Milano, quando - sul finire degli anni Cinquanta - colui che sarebbe stato uno dei principali artefici del rinnovamento della grafica italiana si era volutamente trasferito nella dinamica capitale lombarda dalla città natale di Amsterdam. 
+                        In questa importante esperienza, la giovane Simonetta aveva riversato il sapere della sua articolata formazione internazionale: dall'ambito delle modalità compositive ed espressive molto libere, tese a sviluppare una forte creatività, sino al rigore tipografico; tutte le conoscenze e i valori appresi alla Central School of Arts and Crafts di Londra che la distinguevano erano accompagnati da una spiccata sensibilità artistica e musicale. 
+                        Noorda trova nella giovane grafica milanese una valida collaboratrice, affidabile e molto precisa nell'esecuzione degli incarichi assegnatigli, tanto che quando dovette assentarsi per rientrare momentaneamente in Olanda - a causa dell'improvvisa morte della madre - lasciò a lei per alcune settimane la responsabilità totale dello studio. Simonetta Ferrante si trovò ad affrontare da sola anche il controllo di allestimenti per le fiere campionarie e in questo frangente sviluppò lo studio grafico di alcuni pannelli che rimangono un imprinting specifico per comprendere le caratteristiche della sua prima attività. Si pensi in particolar modo al pannello per le macchine contabili Simplex e Duplex, in cui l'astrazione armonica di piccoli cerchi neri su fondo bianco crea quasi un'immagine astratta capace di evocare musicalità; o ancora il gatto sviluppato a tratti geometrici, in riferimento alla Remington Noiseless, che con semplificazione e ironia arriva direttamente all'immaginario evocativo connettendo pubblicità e immagine. 
+                        Le precedenti esperienze svolte nel campo della grafica, sempre in ambito milanese, erano state anch'esse molto importanti. In particolare, Simonetta Ferrante aveva frequentato lo studio dell'architetto Pier Giacomo Castiglioni, il quale in quegli anni insegnava al Politecnico di Milano, seguendo tra le altre cose la realizzazione di allestimenti per la Fiera di Milano e il padiglione RAI, oltre a quello per la Montecatini. In tale occasione era stata presentata da Castiglioni a Max Huber, grafico svizzero che aveva da poco creato il logotipo per la Rinascente e che si era distinto nel circuito internazionale per il rigore compositivo della scuola mitteleuropea connesso con la fantasia latina. Nello studio di Max Huber Simonetta Ferrante collabora per un breve periodo, effettuando varie impaginazioni grafiche di pubblicità e "cartelli", come allora si definivano i manifesti per le esposizioni; lo attesta infatti una lettera autografa di Huber datata 28 aprile 1954. Sarà soprattutto l'aspetto dinamico delle creazioni grafiche di Max Huber ad affascinarla, composizioni giocate con grande abilità all'interno di una gabbia ben strutturata che ne detta la grammatica visiva ma che è poi sviluppata con la massima creatività. 
+                        In quel magico momento della ricostruzione postbellica, Milano diviene una delle capitali della grafica pubblicitaria a caratura europea; in particolare era possibile intrecciare conoscenze ed essere aggiornati sulla produzione di grandi figure quali Giovanni Pintori, Giulio Confalonieri, Albe Steiner, Michele Provinciali, Franco Grignani e Walter Balmer, per non parlare dei collaboratori internazionali dello studio di Antonio Boggeri. Si stava creando lo "stile milanese" del made in Italy, e in questo frangente Simonetta Ferrante si trova proprio in un crogiolo di relazioni. Sensibile, determinata e capace di saper guardare a quelli che sarebbero diventati i grandi maestri della grafica, la Ferrante declina però la sua cifra artistica in maniera del tutto personale. Si nota la sua presenza di grafica fantasiosa nel rigoroso studio di Bob Noorda agli inizi degli anni 60, si pensi in particolar modo alla serie di annunci per Farmitalia, dove la libertà di figurazione ed espressione compositiva, nonché il forte valore cromatico, creano una piacevolezza d'insieme senza eguali. Il cartoncino della pomata Fargan riprende una texture di un infuocato sole ferragostano, dove il sovrapporsi di ordinati, ma non ripetitivi, segni rossi, azzurri e verdi riporta alla mente le cabine della spiaggia; e la piccola scritta soprastante l'intera composizione, che dipana l'enigma del soggetto reclamizzato, leggendola per ultima, in quanto non attira l'attenzione, diviene l'elemento chiarificatorio; infatti si legge: "eritema solare - punture di insetti". 
+                        Così come accade anche per la pubblicità dei mangimi a uso veterinario, dove l'annuncio propone una base di linee con diverse inclinazioni cui viene sovrapposto un disegno naif, fatto a pennello con contorno nero, di un profilo di mucca. 
+                        Comunicazione diretta, semplice ma piacevole, che ha di fatto creato una differenziazione di ricerca semiotica, come commenta il critico Mario Piazza: "Il segno di Simonetta sembra ricordare, nelle parti illustrate, quasi una tensione informale dove timbri cromatici e ritmo gestuale sono davvero inusuali per la scena grafica di allora. Fatta più di gabbie, moduli, astrazioni geometriche e colori puri". Infatti, in questo utilizzo di parte figurata e parte scritta - come accade nell'elefante della copertina dell'annuncio IGAP - emerge tutta l'esperienza artistica che Simonetta Ferrante ha maturato in Inghilterra seguendo gli insegnamenti del pittore spiritualista Cecil Collins, già allievo del celebre Mark Tobey, e attento sperimentatore del significato simbolico del mondo dei segni. Sicuramente questa riflessione che appartiene a un ambito immateriale è la ricerca che a Simonetta Ferrante piace maggiormente sviluppare verso una introspezione personale, che la porta nella sua vita artistica a indagare sempre più il mondo poetico dei segni e delle lettere. 
+                        il fascino della cultura orientale è nel corso degli anni sempre più presente nell'opera della giovane grafica, e lo si nota nel leporello del calendario per IGAP del 1964, ove accanto allo sviluppo mensile delle giornate viene dato maggior spazio al segno-pittogramma eseguito con tecnica artistica. Fondamentale risulta in questa fase di vita la conoscenza diretta e la collaborazione con il maestro Bruno Munari. Infatti, dopo un breve periodo in qualità di freelance e una successiva fase di lavoro svolto presso la casa editrice Garzanti - dove segue l'impaginazione di dizionari illustrati - inizia a lavorare presso la casa editrice Bompiani come assistente del creativo Munari. 
+                        Le diverse e importanti esperienze svolte sul finire degli anni 50 e l'inizio degli anni 60 la portano a prendere la decisione di aprire uno studio professionale indipendente.
+                    </p>
+                    <h5>Lo studio professionale in proprio</h5>
+                    <p>
+                       In pieno boom economico, Simonetta Ferrante apre uno studio grafico a Milano, in via Turati, in collaborazione 
+                       con l'illustratrice svizzera Giovanna Graf. Due giovani donne che lavorano parallelamente, in sintonia ma in maniera
+                       ben differenziata. Nascono in questi anni le splendide pubblicità per la ditta 3M, in cui i retini sovrapposti e 
+                       l'evanescenza dell'immagine fotografica sfuocata ricordano tutti gli insegnamenti di Max Huber. Per committenti diversi 
+                       la Ferrante studia svariate tipologie di biglietti d'auguri, fra i quali spiccano quelli realizzati per Helena Rubinstein 
+                       (1969), dove lo slogan " auguri di allegria... felicità... spensieratezza... gioia... amore!" risulta perfettamente in sintonia 
+                       con la scelta grafica di riportare sul cartoncino azzurro con tecnica a negativo le parti naturali dei soffioni sfaldati dall'avvenuta 
+                       folata di vento, espressioni che sanno creare una poesia senza tempo e luogo. Ma ancora i biglietti d'auguri con un lettering che, 
+                       seguendo l'ordine dell'alfabeto, evidenzia le cifre iniziali maiuscole di Helena Rubinstein, e la successiva sperimentazione volta 
+                       ai nuovi materiali plastici con il cartoncino d'auguri ove il disegno è impresso sulla trasparenza dell'acetato con alberi stilizzati 
+                       e speculari studiati in modo da inserirsi nello spazio vuoto, centrando il monogramma della stilista committente. Soluzioni originali 
+                       che mantengono sempre come punto di partenza il concetto del progetto grafico e non cadono mai nella banalità, pur nella semplicità 
+                       della comunicazione. Per Simonetta Ferrante, infatti, progetto grafico e ideazione rimangono due aspetti fondamentali dell'espressione 
+                       professionale, anche nelle cose semplici. Si notino a questo proposito i cartoncini pubblicitari per "Luigi Pippa pendolista" o quello 
+                       per la ditta di "Mario Coiffeur pour dames", in cui l'elemento iconico scelto riporta alla professione reclamizzata senza scadere in 
+                       raffigurazioni di genere, e il colore forte e unico del cartoncino li differenza. Nell'insieme l'impostazione grafica è costruita da 
+                       caratteri tipografici semplici, spesso minuscoli, di maxbilliana memoria, dimostrazione della grande conoscenza e capacità di comunicazione. 
+                    </p>
+                    <h5>La grafica per l'editoria</h5>
+                    <p>
+                        Simonetta Ferrante curò con grande professionalità il tema della grafica per l'editoria fin dagli anni 60. Si pensi a questo proposito 
+                        alla costruzione della sovracoperta per l'impegnativo volume intitolato La Formula dell'Immortalità delle edizioni Rizzoli, uscito nel 1963, 
+                        in cui grafica e ironia sanno comunicare in maniera simultanea: un sapiente gioco di equilibrio tipografico, cromatico, gioioso, con cui affronta
+                        il tema invogliando a guardare e a soffermarsi. Su fondo marrone è collocata, in forma di ritaglio a collage, la sagoma di un uomo composta da parti
+                        di carta tratte da complicate formule matematiche, in cui viene apposta una croce in forma arcaica color rosso. Il risultato, seppur elementare, è però
+                        di immediata comunicazione, e ricorda gli insegnamenti di Munari ove appare un substrato di approccio alla cultura armonica e musicale. La ripresa di
+                        elementi del passato, riportati nella validità del contemporaneo estrapolandoli dal loro contesto, evocando i principi tratti dagli insegnamenti della
+                        corrente Fluxus, è molto visibile nei due libri disegnati dalla Ferrante per Editoriale Alfa, curati da Vanna Massarotti, in cui il progetto del libro sta
+                        anche nell'interpretare con ironia il confronto tra passato e presente attraverso diverse tipologie di lettering. Il volume io, Milano. 
+                        Confessioni di una grande città un secolo dopo, infatti, ripreso dal testo originale conservato in Bertarelli con la presentazione di Camilla Cederna, 
+                        ci mostra tutta questa abilità scanzonata di ready-made, simpatica, piacevole e di grande curiosità, che invoglia alla lettura in forma di almanacco delle
+                        tradizioni milanesi come scoperta di titoli con grafismi diversi ma sempre legati a una storia tipografica. Esce nel 1966, anticipando quasi i divertissements
+                        ironici rivolti alla cultura ufficiale, seguito due anni dopo dal libro El sciôr Brüsa. Tiritere milanese, che affianca ai testi in dialetto delle vignette
+                        umoristiche ottocentesche le fotografie di Paolo Monti; testi e immagini che ritornano nella composizione di un'impaginazione moderna. 
+                        Incredibilmente innovativo e che prelude le sperimentazioni tipografiche degli anni 80 è il piccolo volume intitolato Il fiammifero, realizzato nel 1969 con
+                        il grafico Gianni Rossi per Giorgio Borletti editore, con le fotografie di Angelo G. Bernasconi, che narra la storia di un fiammifero, con la sorpresa finale
+                        della composizione grafico-tipografica dell'inserimento di uno spazio riservato al vero fiammifero all'interno del libro stesso. Ma ancora seguono in rapida 
+                        successione originali elaborati quali copertine di dischi (peraltro già studiate nei tempi della scuola londinese) e dépliant per le lezioni di Hatha Yoga usciti nel 1970. 
+                        Nel 1972 viene pubblicato a Milano dalle Grafiche Nava il volume intitolato Due dimensioni, in cui vengono radunati i profili di circa trecento grafici che svolgono 
+                        la libera professione; solo nove sono donne e quasi tutte straniere, fra le poche italiane vi è Simonetta Ferrante a testimonianza dell'alto livello raggiunto e del 
+                        riconoscimento del suo status professionale.
+                    </p>
+                    <h5>La grafica coordinata</h5>
+                    <p>
+                        Simonetta Ferrante è sempre molto aggiornata e si contraddistingue nel panorama lombardo per la campagna, attuata a partire dal 1967, dei pieghevoli e 
+                        manifesti per i grandi Supermercati Esselunga della famiglia Caprotti, suoi diretti committenti. Il logo era stato disegnato da Max Huber e grazie alla sua conoscenza 
+                        Simonetta Ferrante frequenta a Milano il circolo internazionale di artisti, grafici e fotografi che avevano fatto della capitale lombarda un polo in cui operare e 
+                        incontrarsi. Tra i molti ricordiamo lo svizzero Serge Libiszewski (soprannominato a Milano Sergio Libis) e il germanico Richard Sapper.
+                        Simonetta Ferrante realizza una campagna pubblicitaria per i Supermercati Esselunga molto strutturata, di grande semplicità ma di effetto. Utilizza una fotografia di 
+                        Sergio Libis posta in primo piano, raffigurante lo scontrino di cassa, in cui si evince il basso costo della merce. La composizione grafica scelta rende un semplice e 
+                        quotidiano scontrino un'icona del consumo e, come ha sottolineato Mario Piazza, "unisce con un unico gesto i due piani: testuale e iconografico. Li rende materiali, li concretizza
+                        confezionando un messaggio senza fronzoli e volute retoriche". Lo slogan, anche in questo caso, aiuta moltissimo, diviso tra parte destra e sinistra dello scontrino: "spesa presto - spesi bene". 
+                        La scelta dei colori per i manifesti, inoltre, determina un'alternanza di colori freddi - viola e verde oliva - rafforzando la semplicità del messaggio visivo. Nella locandina e nel pieghevole 
+                        utilizza invece il sottofondo di un piano di legno come fosse il tavolo di casa o il piano di lavoro, un'espressione del quotidiano quindi. L'immediatezza del messaggio e la forza comunicativa 
+                        dello scontrino ne fanno una campagna pienamente riuscita, che segna la storia della grafica del secondo dopoguerra. 
+                        Molto interessante è anche la soluzione grafica sviluppata per una serie di dépliant informativi per la capitale lombarda su incarico di Carlo Ripa di Meana, allora direttore dell'Ente di 
+                        Promozione Turistica di Milano, e Gianni Rossi. Questi pieghevoli con cartina di Milano, pubblicati tra il 1969 e il 1970, rimangono per la loro chiarezza ed esemplarità dei modelli. Il fronte propone 
+                        per i diversi anni delle immagini chiaramente presenti nella memoria di tutti i cittadini: il cappello del vigile, la piantina e lo stemma di Milano. 
+                        Affascinata dalla grafica coordinata che sta irrompendo nel panorama internazionale, soprattutto per quanto riguarda la pubblicistica richiesta da ditte e grandi istituzioni in occasione di eventi, 
+                        Simonetta Ferrante realizza nel 1970 il dépliant-programma per l'Ottavo Congresso Internazionale di Psicoterapia dove si riscontra tutto il suo aggiornamento professionale e la costruzione 
+                        di un messaggio visivo chiaro, semplice e fortemente riconoscibile. La sua ricerca continua anche con i marchi d'impresa. Particolarmente interessanti quelli disegnati per la Società Italiana di 
+                        Psicoterapia nel 1970, per Theodore Trancu cinque anni dopo e per l'Associazione Astigiana Monferrina nel 1980, che rivelano una spiccata originalità e capacità distintiva, tutti basati su schemi geometrici a bianco e nero. 
+                    </p>
+                    <h5>Lo studio associato con Carlo Pollastrini</h5>
+                    <p>Nel 1971 Giovanna Graf si sposa trasferendosi a Panarea, Simonetta Ferrante quindi si mette in società con Carlo Pollastrini, fondando lo Studio Barra 6. In questi anni vengono svolti lavori per Fotorex, Galgano, 
+                        Elettrocarbonium, Data Control. In particolar modo saranno gli annunci Data Control, usciti nel 1971, a essere fortemente innovativi e moderni con la composizione fotografica di componenti elettriche elaborate in 
+                        maniera del tutto originale e allusiva ad altre forme del visibile. 
+                        Nel 1975 Simonetta Ferrante diventa membro dell'AIAP - Associazione italiana design della comunicazione visiva, e in seguito fa parte del consiglio direttivo con lo specifico incarico di curare i rapporti con le
+                        organizzazioni internazionali. Pochi anni dopo riprende attivamente l'interesse verso l'espressione artistica e inizia a frequentare, come aveva fatto in gioventù, corsi in Inghilterra tenuti da artisti britannici 
+                        del calibro di Dennis Creffield, John Epstein, Bert Isaac. Armando Milani scrive che "non è stata una sorpresa l.…] scoprire che Simonetta Ferrante si è poi data all'insegnamento della pittura. Il graphic design 
+                        traduce creativamente idee e parole in immagini per comunicare con gli altri. L'arte invece è una continua ricerca verso la comunicazione con sé stessi. Probabilmente questo bisogno d'introspezione ha spinto Simonetta 
+                        ad abbandonare il design dopo 25 anni di attività per dedicarsi completamente all'arte". Sicuramente non è stato indifferente il mutare della condizione professionale, che ha visto a partire dall'inizio degli anni 80 
+                        cambiare radicalmente il rapporto del graphic designer con la sua committenza a causa dell'entrata sul mercato delle grandi agenzie, create sul modello americano, in cui lo spazio per la creatività e lo studio del 
+                        progetto grafico venivano messi in secondo piano. 
+                        Simonetta Ferrante, che aveva iniziato la professione di grafica credendo fermamente nella passione nel "mestiere", in cui come aveva affermato Bob Noorda "bastano delle matite e prende tutta la vita, si era trovata 
+                        invece a un bivio in cui per poter continuare a esprimere creatività e fantasia - le sue cifre distintive - la via da seguire era quella di ritornare alla ricerca calligrafica, al ritmo fra tratto e colore, poiché - 
+                        come è stato detto - "i segni mettono le ali”.
+                        </p>
+            </div>
+                <div class="container_capitolo"> 
+                    <div class="sottotitolo" id="progetto-corrispondenza">
+                    <h2>Il progetto<br>della corrispondenza</br></h2>
+                       <h3>a cura di Daniela Piscitelli</h3>
+                     </div>        
+                        <p>L'opera di Simonetta Ferrante è la testimonianza del lavoro di una designer che sicuramente può essere annoverata tra le pioniere del design italiano e della ricerca artistica, in quella zona di confine che vede 
+                            ibridarsi e fertilizzarsi pratiche del progetto che dalla ricerca sul segno spaziano nella ricerca tipografica e calligrafica, l'editoria, la pittura e tutti quegli ambiti nei quali il segno si fa forma simbolica 
+                            ed evocativa. Ma questa mostra diventa anche il grimaldello per poter contribuire a tracciare un processo di ricerca sul design al femminile che, soprattutto in Italia, è tutto ancora da costruire, tanto che se il 
+                            pensiero corre alle donne che hanno lasciato un'impronta nel mondo del progetto di comunicazione, immediatamente ci si collega a Lica Steiner oppure a quei pilastri d'oltralpe che hanno segnato la nostra formazione,
+                            le nostre visioni, la nostra cultura e i nostri desideri, almeno per quelli della mia generazione. Questa mostra, quindi, può rappresentare l'occasione per cercare di ottemperare a una "dimenticanza" della storia, 
+                            una " distrazione" che, a fronte di un'ampia presenza femminile nel mondo professionale del design della comunicazione, ne ha però provocato una sua "sparizione dalle pubblicazioni, dai convegni, nell'insegnamento" 
+                            e in tutti quei contesti istituzionali e accreditati.</p>
+                        <h5>Il contesto</h5>
+                        <p>La produzione grafica di Simonetta, quella degli anni 50 e fino agli inizi degli anni 90, risente di quel particolare clima progettuale nel quale con il Modernismo italiano esplode la poetica dell'artefatto industriale, 
+                            filtrata da quella grande cultura che si affacciava nella Milano del made in Italy di quegli anni. Siamo in un'epoca ricca di entusiasmi e di speranze; lo stile industriale italiano cresce nelle maglie di una imprenditoria 
+                            media e piccola che vuole fare del design la propria leva competitiva. Non è una scelta consapevole, piuttosto un sentire comune, che riunisce intellettuali, architetti, designer, artisti e imprenditori nella medesima voglia 
+                            di rivalsa e di ripresa che il Paese intero richiede. E sono anche gli anni nei quali quella stessa industria italiana si muove, abitualmente, su una forzatura al limite - come dirà poi Anceschi -, mossa da una "abitudine a 
+                            competere con prodotti realizzati in altri contesti a partire da tecnologie adeguate, dovendosi accontentare di mezzi e tecnologie arcaiche" Questa necessità di dover superare un gap tecnico porta i designer di allora, anche
+                            nella grafica, a spingersi verso ricerche spregiudicate quanto illuminate, un "pionierismo che costringe alla sperimentazione". 
+                            In questo clima Milano viene percepita come la capitale economica e culturale del Paese, baricentro di creatività, innovazione, cultura e avanguardie. Un contesto nel quale esplode, insieme alle poetiche dello stile industriale, 
+                            anche la fortunata stagione della grafica del made in Italy, quella che, germogliata intorno allo Studio Boggeri di Milano, nella seconda metà degli anni Trenta, trova poi spazio dagli anni 50 in poi grazie a una committenza 
+                            illuminata che ha saputo riconoscere anche nel design grafico uno strumento strategico e di distinzione. Lo "stile milanese" diventa uno dei tratti distintivi di quel contesto culturale e imprenditoriale: Milano era un piede 
+                            nella promessa europea, era la bellezza della nebbia riconosciuta come sinonimo di lavoro in contrapposizione all'idea del 
+                            "bel giardino" del resto dell'Italia, era il centro nel quale quello "stile milanese" avrebbe dettato le regole del buon progetto grafico, che dall'illustrazione e da un approccio artigianale si spostava sempre più verso un'area 
+                            di supporto e promozione dell'industria e, "come nel design di prodotto, anche nella grafica possiamo dire che gli anni Sessanta sono stati la stagione dei grandi maestri". 
+                            Albe Steiner, Max Huber, Bruno Munari, Giovanni Pintori, Pino Tovaglia, Remo Muratore, Erberto Carboni sono solo alcuni tra i protagonisti di quella prolifica stagione, cui si affianca un mondo femminile, poco celebrato e storicizzato, 
+                            di grande levatura e capacità. Il pensiero corre a designer quali Giovanna Bortolozzi, Giovanna Graf, Natale Ligasacchi, Ornella Linke Bossi presenti alla mostra Italian Graphic Art del gennaio 1968 organizzata da AIAP a Manchester. 
+                            Ma anche a Rosaria Siletti Tonti e a Brunetta Mateldi, artista già all'epoca di fama internazionale, segnalata soprattutto grazie ai suoi progetti per la moda. 
+                            Ma anche Umberta Barni, Maria Enrica Agostinelli, Claudia Morgagni Robaudi e, non certamente ultime, Anita Klinz e Lora Lamm. Anni in cui nel Notiziario Nava si potevano contare ben diciannove designer, segno di una presenza importante 
+                            e prolifica in un mondo prevalentemente maschile. 
+                            Simonetta è stata quindi testimone e protagonista di quell'epoca italiana di passaggio tra la ruralità e la nascente industria, un'epoca ricca e felice nella quale l'idea progressista implicita nella parola "progetto" bastava a fare 
+                            immaginare una nuova cultura domestica, ponendosi quale apripista rispetto a un mondo ancora radicato in una cultura professionale maschile, e quale modello per un mondo femminile che aveva necessità di potersi evolvere da un contesto 
+                            italiano in bilico tra un passato agricolo e una prospettiva industriale, una mentalità cattolica e una nascente cultura borghese e laica. 
+                            Essere una designer, ed essere anche donna, anche nella "nuova Milano", richiedeva forza, sense of humor, capacità di relazione, flessibilità e determinazione. Simonetta queste doti le aveva e le ha ancora tutte, rafforzate da una 
+                            mentalità aperta e internazionale che le ha consentito, fin dagli anni della sua formazione alla Central School of Arts and Crafts di Londra, di confrontarsi con molti altri mondi e altre culture, assorbendo da queste le poetiche 
+                            delle scritture locali, ma anche i suoni e le cromie, da lei elaborate grazie a una mentalità accogliente e curiosa di tutto.
+                        </p>
+                        <h5>Scritture non lineari</h5>
+                        <p>
+                            A guardare il lavoro di Simonetta Ferrante, la sua formazione, il suo essere cresciuta alle discipline umanistiche ed estetiche, in contesti nazionali e internazionali, con esperienze scolastiche all'estero in scuole già allora molto 
+                            rinomate, divisa equamente tra arte, musica e letteratura - confortata da maestri come Huber e Pintori, affiancata da designer come Munari e Bob Noorda, incoraggiata da Felice Casorati e Primo Conti -, viene in mente la Repubblica di 
+                            Platone, laddove egli scrive che gli unici "maestri di vita e giudici di bellezza" sono coloro cresciuti a discipline come la filosofia, le arti, la musica, la matematica e la dialettica, che non vanno apprese a fini utilitaristici, 
+                            bensì servono soprattutto a costruire coscienze. Una formazione sfaccettata come quella ricevuta da Simonetta, quindi, unita alla sua capacità e alla sua curiosità nell'andare a investigare culture lontane, orientali, e attraversare 
+                            molti mondi del progetto, ci restituiscono una produzione prolifica e trasversale tra grafica, illustrazione, calligrafia e pittura, intrisa di Oriente e Occidente. 
+                            Questa capacità di meticciare linguaggi differenti consente a Simonetta di rinfrancarsi da quegli stessi stilemi che la grafica italiana e lo stile milanese cercavano di codificare. 
+                            Una natura così libera e curiosa, ibrida e spregiudicata, non avrebbe mai potuto farsi imbrigliare, tantomeno dai canoni che in quegli anni la scuola svizzera cercava di imporre all'Italia e a Milano; e se è vero che "alla meticolosa 
+                            perfezione della grafica svizzera, perfetta come quella di una ragnatela", la grafica italiana rispondeva con l'elemento eccentrico, quella mosca, come dirà lo stesso Boggeri, che sola avrebbe potuto conferire senso a quella, altrimenti 
+                            inutile, perfezione, è altrettanto vero che nella ricerca di Simonetta Ferrante la necessità di rompere la fissità delle gabbie e dei moduli, la statica fissità dell'immagine, riesce ad affrancarsi anche da quello stile milanese che faceva 
+                            da contraltare alla grafica svizzera, per tradursi in un equilibrio sorprendente tra timbri cromatici e segni gestuali, dove sovente la lettera si fa segno e ordito. È un continuo rimando dal segno archetipo alla trama che ne viene generata, 
+                            è equilibrio dinamico tra elementi che, in raccordo sonoro, si reggono nello spazio della rappresentazione che si fa racconto. 
+                            Perché la scrittura è sempre presente nei lavori di Simonetta, una scrittura non lineare e non sempre alfabetica, anzi una scrittura che si evolve dalla tirannia dell'alfabeto proprio come lo scriba egiziano, quando si serviva di un quadrato 
+                            immaginario contenente tutti i geroglifici. Lo leggiamo nella serie di immagini Mar Absoluto del 2001 o anche nelle opere Hablando Volando del 2013 per farsi evidente nella serie Forse un alfabeto basco del 2001. 
+                            Si ricostruisce così, nel luogo delle superfici di carta e nelle tecniche usate con sapienza, e grazie alla reciprocità tra gesto e impronta, tra traccia e forma, una relazione dialettica con la trama narrativa già esplicitata in ogni titolo. 
+                            Una scrittura che si evolve dalla sua relazione con la lingua e la parola, per dare vita non solo a un processo creativo, ma alla qualità dei riti performativi della danza e della musica, una scrittura che si emancipa radicalmente dagli alfabeti, 
+                            dalle grammatiche e dalle sintassi della parola scritta ritornando alla qualità dei riti performativi e costruisce veri e propri spazi narrativi. Una scrittura che educa (trae a sé) senza le forme del libro, ma che suggerisce che là, proprio nello 
+                            spazio vuoto tra un segno e l'altro, esistono altre infinite possibilità di racconto. 
+                            Fredda alita la sera, Voglia di Cina, Mar Absoluto, Il solco del pennino, Stree e L'idea che il diritto su un seme sia proprietà privata è inaccettabile (solo per citarne alcuni) non sono, infatti, né prodotti editoriali né opere d'arte assolute, 
+                            piuttosto nature ibride, sospese tra natura e artificio, oggetti animati che se da un lato ci riportano ai Libri impossibili di Bruno Munari, dall'altro lato sgretolano il pregiudizio alfabetico della logora contrapposizione tra immagine e testo. 
+                            Oggetti che anticipano le qualità performative dell'interazione e consentono di abitare uno spazio in cui l'immagine designa e insieme racconta. E se "abitare è una facoltà umana, cioè è una abilità acquisita, costruita su una predisposizione 
+                            biologica (l'essere fisicamente presenti in un luogo), Simonetta la elabora continuamente e culturalmente, condividendola con le società e le culture che, nel suo andare sempre lontano, incontra". 
+                            Ancora oggi Simonetta continua a essere testimone delle contemporanee trasformazioni, osservatrice attenta e divertita, delle discrasie contemporanee, preoccupata delle frizioni del mondo, soprattutto quelle delle terre più estreme che lei 
+                            tanto ama osservare e penetrare. 
+                            Ma soprattutto e protagonista e artefice di quella capacità propria delle menti più raffinate che alla razionalità occidentale ha saputo contrapporre la ragione del pensiero, l'umanesimo, e quella capacità di ascolto innata di chi ha fatto delle 
+                            scienze e culture meticciate la propria forza. Le opere di Simonetta non sono solo oggetti, sono piuttosto casse armoniche, progetti di corrispondenza. "L'ascolto - ci dice Nancy - presuppone il riconoscimento preventivo di 'un essere altro', 
+                            della disponibilità a riconoscere una identità che si rende riconoscibile attraverso un 'risuonare' in noi, in una sorta di corrispondenza di movimento" nel quale si produce senso. Ecco, le opere di Simonetta Ferrante sono proprio questo, racchiudono 
+                            tutto il proprio senso esattamente nell'attualità superficiale dell'ascolto, ovvero nella fenomenalità dell'apparenza sensibile". 
+                        </p>
+                </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#" class="back-to-top">Torna su</a>
+            <a href="../magazine.pdf" class="pdf-link" target="_blank">Scarica il magazine</a>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

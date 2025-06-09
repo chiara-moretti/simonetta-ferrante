@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Biografia</title>
+        <link rel="stylesheet" href="../style.css" id="style-theme">
+    </head>
+    <body class="body">
+        <div class="navbar">
+            <div class="islanav">
+                <button class="nav-link"  onclick="changeMode()">
+                    <img src="../img/home/mezzaluna1.svg" alt="Dark mode toggle" style="width: 20px; height: 20px;">
+                </button>
+            </div>
+            <div class="islanav">
+                <div></div>
+                <div class="dropdown">
+                    <a href="/" class="nav-link">Home</a>
+                    <div class="dropdown-content">
+                        <a href="/#editoriale" class="dropdown-item">La memoria del visibile: segno, colore, ritmo e calligrafie</a>
+                        <a href="/#magazine" class="dropdown-item">Il magazine</a>
+                        <a href="/#crediti" class="dropdown-item">Crediti e informazioni</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="/pagine/biografia.html" class="nav-link">Biografia</a>
+                    <div class="dropdown-content">
+                        <a href="/pagine/biografia.html#note-curatori" class="dropdown-item">Note dei curatori</a>
+                        <a href="/pagine/biografia.html#linea-tempo" class="dropdown-item">Linea del tempo</a>
+                        <a href="/pagine/biografia.html#liberta-londinese" class="dropdown-item">La libertà londinese. L'asse Milano-Londra come paradigma di modernità.</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="/pagine/grafica.html" class="nav-link">Grafica</a>
+                    <div class="dropdown-content">
+                        <a href="/pagine/grafica.html#graphic-designer" class="dropdown-item">Simonetta Ferrante graphic designer: costruzione compositiva, creatività e fantasia</a>
+                        <a href="/pagine/grafica.html#progetto-corrispondenza" class="dropdown-item">Il progetto della corrispondenza</a>
+                    </div>
+                </div>
+                <a href="/pagine/pittura.html" class="nav-link">Pittura</a>
+                <div class="dropdown">
+                    <a href="/pagine/calligrafia.html" class="nav-link">Calligrafia</a>
+                    <div class="dropdown-content">
+                        <a href="/pagine/calligrafia.html#scrittura-astratta" class="dropdown-item">La scrittura astratta di Simonetta Ferrante</a>
+                        <a href="/pagine/calligrafia.html#paesaggio-frammenti" class="dropdown-item">Un paesaggio di frammenti calligrafici</a>
+                        <a href="/pagine/calligrafia.html#paesaggi-calligrafici" class="dropdown-item">Paesaggi calligrafici. Una delicata danza di lettere</a>
+                    </div>
+                </div>
+                <a href="/pagine/intervista.html" class="nav-link">Intervista</a>
+            <div></div>
+            </div>
+        </div>
+        <div class="container_carousel" style="margin-top: 120px;">
+            <section class="carousel">
+                <p id="carousel-counter" class="carousel-counter">1 / 4</p>
+                <div class="control left-control">
+                    <button id="prev-btn" onclick="scrollToItem(currentItem - 1);">
+                        <!-- Ho incollato un'immagine svg come icona previous -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                          <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/>
+                        </svg>
+                      </button>
+                </div>
+                <div class="control right-control">
+                    <button id="next-btn" onclick="scrollToItem(currentItem + 1);">
+                        <!-- Ho incollato un'immagine svg come icona next -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="bullet-container" class="bullet-container">
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                </div>
+                <ul id="carousel-list" class="carousel-list">
+                    <li class="carousel-item">
+                        <img src="../img/pittura/Paesaggio toscano 2000.jpeg"/>
+                        <div class="carousel-caption">Paesaggio toscano (2000)<br>Chiasso m.a.x. museo, Archivio Simonetta Ferrante</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/pittura/Beirut.jpeg"/>
+                        <div class="carousel-caption">Beirut (1963)<br>Chiasso m.a.x. museo, Archivio Simonetta Ferrante</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/pittura/Giallo senza fine.jpeg"/>
+                        <div class="carousel-caption">Giallo senza fine (1997)<br>Chiasso m.a.x. museo, Archivio Simonetta Ferrante</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/pittura/Apparizione nuovo.jpeg"/>
+                        <div class="carousel-caption">Apparizione (1996)<br>Chiasso, m.a.x. museo, Archivio Simonetta Ferrante</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/pittura/Ascoltando Mozart.jpeg"/>
+                        <div class="carousel-caption">Ascoltando Mozart (1987)<br>Chiasso m.a.x. museo, Archivio Simonetta Ferrante</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/pittura/Messaggio:paesaggio 2.jpeg"/>
+                        <div class="carousel-caption">Messaggio/Paesaggio (1996)<br>Chiasso, m.a.x. museo, Archivio Simonetta Ferrante</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/pittura/La gioia di scrivere.jpeg"/>
+                        <div class="carousel-caption">La gioia di scrivere (2012)<br>Chiasso, m.a.x. museo, Archivio Simonetta Ferrante</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/pittura/Piedras 1.jpeg"/>
+                        <div class="carousel-caption">Piedras hablandome (2012)<br>Chiasso, m.a.x. museo, Archivio Simonetta Ferrante</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/pittura/Piedras 4.jpeg"/>
+                        <div class="carousel-caption">Piedras hablandome (2015)<br>Chiasso, m.a.x. museo, Archivio Simonetta Ferrante</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/pittura/Piedras 5.jpeg"/>
+                        <div class="carousel-caption">Piedras hablandome (2015)<br>Chiasso, m.a.x. museo, Archivio Simonetta Ferrante</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/pittura/Ola detras de la mar.jpeg"/>
+                        <div class="carousel-caption">Olas detras la mar (2013)<br>Chiasso, m.a.x. museo, Archivio Simonetta Ferrante</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/pittura/Mar Absoluto.jpeg"/>
+                        <div class="carousel-caption">Mar Absoluto (2001)<br>Chiasso, m.a.x. museo, Archivio Simonetta Ferrante</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/pittura/Mar absoluto 2.jpeg"/>
+                        <div class="carousel-caption">Mar Absoluto (2001)<br>Chiasso, m.a.x. museo, Archivio Simonetta Ferrante</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/pittura/Life Drawing 1976.jpeg"/>
+                        <div class="carousel-caption">Life Drawing (1976)<br>Chiasso, m.a.x. museo, Archivio Simonetta Ferrante</br></div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="container">
+            <div class="container_capitolo">
+               <div class="sottotitolo">
+               <h2>Ritmi della memoria, sincronie del segno<br>e del colore</br></h2>
+                  <h3>a cura di Nicoletta Ossanna Cavadini e Claudio Cerritelli</h3>
+                </div>        
+                    <p>Anomala, irregolare, per molti anni defilata dal sistema dell'arte,
+                       la storia creativa di Simonetta Ferrante si dirama tra molteplici 
+                       esperienze nel campo della grafica pubblicitaria, prima che si 
+                       dedicasse in modo persistente all'approfondimento della ricerca 
+                       artistica. Le opere scelte per questa donazione al m.a.x. museo 
+                       di Chiasso restituiscono la sintesi del suo percorso creativo, 
+                       lo sperimentalismo dei procedimenti segnici e i fondamenti cromatici
+                       della sua identità.<br>
+                       </br><br>Dopo il periodo di formazione a Londra e nel Galles (decisiva è la 
+                       frequentazione dei corsi di Dennis Creffield, Jonathan Epstein e Cecil 
+                       Collins), nel corso degli anni Sessanta avviene l'avvicinamento di Simonetta 
+                       Ferrante al mondo dell'arte, quando la pratica del disegno e della pittura 
+                       assume una dimensione autonoma e libera rispetto alle ricerche di grafica, 
+                       che richiedono segni studiati con precisione, limpidezza, leggibilità. 
+                       Rientrata in Italia, l'artista accoglie i suggerimenti di Felice Casorati a 
+                       Torino e l'incoraggiamento di Primo Conti a Firenze, dove espone in una mostra 
+                       collettiva presso la Galleria Numero diretta da Fiamma Vigo, attenta alle 
+                       ricerche di segno astratto-informale. 
+                       Per Ferrante si tratta di sporadiche occasioni espositive, isolati confronti 
+                       che non hanno continuità nei decenni successivi, almeno fino al 1988, quando 
+                       la sua ricerca è proposta in una mostra personale a Milano. 
+                       Prima di questa data, figure e paesaggi sono i generi maggiormente frequentati, 
+                       tramiti di una evocazione naturalistica che è all'origine della sua visione, 
+                       ricerca di movenze essenziali, ritmi fluidi, accordi intuitivi. 
+                       Se in Beirut (1963, pastello acquerellato) la luce del paesaggio è resa con toni 
+                       lievi e misurati, come uno stato d'incanto del colore, nel caso di Landscape (1981, 
+                       tecnica mista) la visione si accende con forti bagliori e tracce d'oscurità, gli 
+                       equilibri vacillano, l'impeto cromatico genera improvvise e inquiete traiettorie 
+                       spaziali. 
+                       Di tutt'altro tenore è Paesaggio toscano (1985, carboncino su carta), dove il 
+                       referente naturalistico torna a essere più visibile, le consistenze del segno 
+                       accentuano la percezione dei dettagli, la struttura dell'immagine gioca tra il 
+                       primo piano degli alberi e il campo lungo della veduta; l'occhio entra in scena 
+                       colmando le distanze, l'atto contemplativo è in bilico tra emozione e razionalità. 
+                       In un foglio realizzato molti anni dopo e analogamente intitolato Paesaggio toscano 
+                       (2000, tecnica mista) si avverte il passaggio dai toni ombrosi a una luminosità soave, 
+                       inebriata dalla gioia di vivere nella dimensione aurorale della pittura, fonte di 
+                       rispecchiamento della natura.</br>
+                       <br>Come spesso avviene, le nuove ideazioni rischiano di rimanere inascoltate e non 
+                       vi sono occasioni espositive: la già citata mostra milanese del 1988, presentata 
+                       da Elena Pontiggia, ha il merito di documentare questa fase cruciale, collocando 
+                       la pittura di Ferrante alla tradizione dell'Informale segnico. 
+                       In quest'ambito emergono vari riferimenti (da Masson a Tobey, d a Afro a Tancredi, 
+                       da Turcato a Twombly), sebbene questa specifica genealogia stia solo a indicare un 
+                       orientamento affine dal punto di vista formale. Infatti, analoga è l'esigenza di 
+                       bilanciare il temperamento inquieto del segno e la fluidità della luce cromatica, 
+                       la relazione stringente tra gesto e materia, propagazione vitale di un alfabeto 
+                       senza finalità descrittive. 
+                       La volontà di dedicarsi completamente alla pittura emerge negli anni Ottanta in 
+                       modo ancora discontinuo, è solo dopo il 1993, in realtà, che il rapporto con il 
+                       contesto artistico milanese si fa più intenso, soprattutto per il fatto di aver 
+                       concluso l'avventura professionale nel campo della grafica, attività che ha portato 
+                       numerosi e lusinghieri riconoscimenti. 
+                       Negli stessi anni si conclude anche il ciclo dell'insegnamento presso il Centro 
+                       dell'Immagine e dell'Espressione, esperienza didattica portata avanti con la 
+                       collaborazione di diversi artisti (Renata Boero, Rino Crivelli, Cesare Fullone, 
+                       Lucia Pescador, Stefano Pizzi, Mario Raciti e altri ancora). Si tratta di scelte 
+                       impegnative che Ferrante affronta con quella passione che contraddistingue il 
+                       rigore operativo della sua visione creativa, confronti collettivi che si esauriscono 
+                       nel tempo, spingendo l'artista a sentirsi sempre più libera di approfondire il 
+                       "proprio" segno.  
+                       Messaggio/Paesaggio è il titolo di alcuni dipinti a olio realizzati nel 1996, 
+                       l'assonanza fonetica tra i due termini indica la loro equivalenza metaforica: 
+                       il paesaggio non è solo un luogo di reinvenzione morfologica della natura, 
+                       ma uno strumento di riflessione sui complessi rapporti umani che vi si riflettono.</br>
+                       <br>Un senso di emanazione solare si avverte in Giallo senza fine (1997), uno degli 
+                       esempi di maggior libertà espressiva in questa fase di ricerca, il dialogo tra 
+                       segno e colore si fa denso e stringente, le tracce scritturali si modificano e 
+                       si frantumano alterando gli equilibri cromatici. 
+                       Un ritmo frenetico s'insinua nella luce del giallo, lo sguardo è sedotto dalle 
+                       trasfigurazioni luminose che inondano lo spazio, del resto il proposito di 
+                       armonizzare i singoli colori è un processo destinato a rigenerarsi di continuo, 
+                       opera dopo opera, in modo interminabile. 
+                       Ne è consapevole Ferrante che affida alla pittura i diversi umori del fare, 
+                       effetti interscambiabili dove i piani di racconto s'interpongono nella fluida 
+                       tessitura cromatica, come un insieme di storie che non si esauriscono in un 
+                       solo alfabeto.
+                       Il paesaggio non risponde più alle suggestioni del vero, è spazio autonomo 
+                       che coincide con le risonanze della fantasia, il pensiero oscilla sul crinale 
+                       dei ricordi, le proiezioni della mente aprono varchi inaspettati. 
+                       Infatti, il titolo di un'opera del 2011, È la mente che traccia la strada, 
+                       propende per la pura invenzione immaginativa, rossi bagliori sprigionano lievi 
+                       cangianze nello spazio misterioso del blu, lo sguardo va incontro allo stupore 
+                       di luci sconosciute.</br>
+                       <br>Le evoluzioni dinamiche del segno sono esplorate con altre tecniche pittoriche, 
+                       nel caso di una singola tempera (Senza titolo, 2008) il divenire intrigante delle 
+                       linee è fissato con tratti sottili e discontinui, avventuroso tragitto che si dipana 
+                       nei ritmi sincopati e asimmetrici del fluido divenire grafologico. 
+                       Altro clima d'immagine si respira nel ciclo di acquerelli Piedras hablandome 
+                       (2012-2015): la luce del colore è lieve e trasparente, le forme sono velate d'azzurro, 
+                       di viola e di altri aloni dai toni soffusi. 
+                       Sulla carta emergono icone che si dileguano come plaghe d'acqua, tremiti d'aria 
+                       sciolgono il profilo delle pietre fondendo segno e colore in un unico corpo, 
+                       come una macchia che si dilata tutt'intorno. 
+                       La poetica dello spazio-luce è inseparabile dal cangiare impalpabile dell'acquerello, 
+                       essa raggiunge in questi fogli una qualità di trasparenze che solo la sensibilità 
+                       esecutiva può garantire, il colore è attimo che traspira nel filtro sospeso tra 
+                       superficie e profondità. 
+                       Diverso è il discorso per la sequenza di quattro acquerelli dedicati alle pure 
+                       ritmiche del segno, Aguamarga (2011), in questo caso si tratta di fissare gli 
+                       automatismi del gesto scattando con linee divergenti segni carichi d'ebrezza, 
+                       capaci di evocare le essenze musicali del colore. 
+                       Ferrante stabilisce costanti relazioni tra l'orizzonte immaginativo del dipingere e 
+                       le risonanze sonore del flusso cromatico, la molteplicità dei registri espressivi 
+                       crea correlazioni continue con la sua inclinazione musicale, avviata fin dai giovanili 
+                       studi di pianoforte. 
+                       Questa passione si avverte anche quando non è direttamente esplicitata nei titoli 
+                       delle opere, essa è parte dell'identità creativa dell'artista, riguarda l'azione 
+                       simultanea dei sensi visivi, verbali, sonori, tattili: il respiro sinestetico del 
+                       dipingere. Non v'è alcuna pretesa di rigore scientifico nel modo di affrontare il 
+                       rapporto tra pittura e musica, le corrispondenze tra i due linguaggi sono analogiche 
+                       e intuitive, vissute sul filo dell'evocazione. Oltre al già citato omaggio a Mozart 
+                       (1987), sorprende il tono ironico che accompagna l'ascolto degli autori preferiti: 
+                       Rubando da Bach, largo ma non tanto dietetico (1995), mai come in questo titolo 
+                       quasi irriverente Ferrante si diverte a congiungere con sottile allusione il canone 
+                       musicale al gusto del nutrimento visivo. 
+                       Senza scomodare Kandinskij, Klee, Melotti, Veronesi e quanti altri hanno indagato 
+                       i legami tra suono e colore, si può dire che nel caso di Ferrante questa corrispondenza 
+                       è vissuta nell'intimo e armonico rapporto tra memoria e fantasia, soprattutto come 
+                       slancio vitale, libero dialogo tra linguaggi paralleli e interferenti. L'esperienza 
+                       dell'ascolto suggerisce forme e colori percepibili nelle loro diramazioni sensoriali, 
+                       condizione imprescindibile per il pittore in cerca di assonanze. Diversamente, se 
+                       le corrispondenze tra i due linguaggi sono puramente teoriche, tutto rischia di 
+                       rimanere a livello di codificazione concettuale, priva di quella tensione iperbolica
+                       necessaria ad alfabeti sospesi come funamboli nel vuoto.</br>
+                       <br>Evocativo e lirico è anche il rapporto con la poesia, esso costituisce un 
+                       persistente versante di ricerca su cui Ferrante medita e riflette, assimilando 
+                       il clima visionario dei poeti preferiti (da Borges a Szymborska, da Meireles a 
+                       Merini, da Oldani a Candiani), tramiti ideali per comunicare stati d'animo protesi 
+                       verso La gioia di scrivere (2012). 
+                       Il rapporto non è unilaterale, in alcuni casi anche il poeta sa trarre godimento 
+                       dall'osservazione della pittura, "dalle prospettive casuali e ordinatissime realizzate 
+                       dalla giustapposizione di tasselli di colore diverso", così si legge in un testo 
+                       dedicato all'artista da Guido Oldani. 
+                       D'altro canto, Ferrante è consapevole che guardare alla poesia non significa soltanto 
+                       possibilità di trascriverne il senso in termini pittorici, ma soprattutto capacità 
+                       di sollecitare punti di congiunzione tra immagini visive e perimetri verbali, 
+                       rivelando affini desideri d'infinito (Leopardi a Silvia. Infinitamente, 2014, collage). 
+                       Sospinte verso il mistero dell'oltre, pittura e poesia cercano il senso dell'altrove, 
+                       soglie impercettibili si dilatano in oceani di luce, inquieti orizzonti affiorano 
+                       nella citazione dei versi poetici, immagini trasfigurate sulle ali del colore, 
+                       attraverso sintonie che non si possono programmare. 
+                       Nel ciclo Mar Absoluto da Cecilia Meireles (1999-2001) la musicalità della visione 
+                       poetica rimanda alle fluide sensazioni dell'acqua, il moto perpetuo delle onde è 
+                       paragonabile al flusso visivo e sonoro della scrittura pittorica. Il carattere 
+                       metaforico dell'immagine indica che il percorso dell'esperienza creativa è analogo 
+                       al pensiero che scorre senza argini, più ci si addentra nelle trasparenze del 
+                       fluire cromatico, più cresce il desiderio di abbandonarsi al suo movimento ininterrotto. 
+                       Nelle trasparenze monocrome delle gouache i segni si compenetrano con la luce, 
+                       si aggregano in modo improvviso, dalla forza misteriosa del colore affiora la magia 
+                       fluente delle onde, la vastità del mare assoluto. "L'opera è un'avventura dello spirito; 
+                       il dipingere è una sorta di meditazione" - così ha scritto Elisabetta Longari riflettendo 
+                       sulla predisposizione dell'artista a captare l'instabilità del vuoto, i movimenti 
+                       istantanei che avvengono senza preavviso.</br>
+                       <br>Azione e meditazione sono momenti compresenti della vertigine creativa, modi 
+                       simultanei per sublimare le forme naturalistiche attraverso le qualità intrinseche 
+                       della sensibilità pittorica, facendo confluire nella stessa immagine tensioni lineari 
+                       e improvvise curvature, compresenze necessarie per superare i limiti del pensiero logico. 
+                       Per comprendere il peso strutturale della forma bisogna considerare alcune opere in 
+                       cui Ferrante guarda simbolicamente ai grandi autori che l'hanno affascinata (Omaggio 
+                       a Mondrian, 2000, monotipo; Omaggio a Chillida, 2011, inchiostro). Il riferimento va 
+                       alla decodificazione dell'immagine dell'albero condotta dal pittore olandese, oppure 
+                       alle gravitazioni modulari degli inchiostri su carta dello scultore spagnolo. 
+                       Si tratta di modi differenti di restituire l'immagine della natura attraverso i 
+                       magnetismi interni della forma, da un lato il processo di semplificazione degli 
+                       elementi strutturali, dall'altro la dialettica positivo-negativo del segno plastico 
+                       che agisce appropriandosi del vuoto. 
+                       In entrambe le situazioni, seppur diverse, Ferrante si concentra sulla possibilità 
+                       di esprimere con concisione il ritmo vivente della forma, passando dalle morfologie 
+                       della natura alle soglie dell'astrazione. 
+                       Negli inchiostri su carta l'artista capta le energie del profondo come essenze del 
+                       visibile, la seduzione calligrafica fissa tutti fantasmi interiori in un solo gesto, 
+                       il rituale ripetersi del segno dialoga con il mito, l'infinito. Se è vero che nella 
+                       percezione del vuoto sta la radice di ogni visione possibile, l'artista ne avverte 
+                       il silenzio, la risonanza impercettibile, la trasparenza che si dilata nelle sfumature 
+                       dei pigmenti, ogni tocco volteggia con levità nel bianco (Hablando Volando; Juegos de 
+                       palabras, 2013) 
+                       In ogni caso, Ferrante asseconda la sapienza della mano che si avventura nello spazio, 
+                       registra ciò che avviene tra il pensiero e il gesto, escludendo dal procedimento del 
+                       dipingere ogni forzatura concettuale.</br>
+                       <br>Nell'ultimo decennio il raggio d'azione si amplifica, si muove dalla superficie 
+                       all'oggetto, dalla carta al collage, dalla scrittura al libro, sviluppando nuovi 
+                       rapporti e contaminazioni tra le differenti qualità dei materiali, anche all'interno 
+                       della stessa opera. 
+                       Nei cosiddetti libri d'artista (1997-2015) confluiscono pensieri poetici e sensazioni 
+                       materiche, ritagli di carte e reti metalliche, frammenti liberi di fluttuare da una 
+                       pagina all'altra, grovigli di lettura che rimandano agli intrecci grafici dei monotipi
+                       e delle incisioni. Tra i dettagli visivi e le sorprese verbali insorgono gorghi sonori, 
+                       modulazioni di segni e colori che lambiscono l'epidermide della carta, manipolata, pressata, 
+                       increspata, macerata e ricomposta come una mappa in continua modificazione. 
+                       In Delirio amoroso (1997) sottili strisce ricavate da monotipi serpeggiano entro una 
+                       rete metallica, la superficie curvata accoglie il loro movimento convulso, sospeso nel 
+                       fluire curvilineo di andamenti contrapposti, in tal modo l'artista evoca il trasalire 
+                       erotico dei sensi, la memoria del vissuto si avverte quasi a fior di pelle. 
+                       Caratterizzato da plastici ondeggiamenti è un libro dedicato al tema prediletto del 
+                       Mar Absoluto (2001), ritagli di incisioni sono montati su rete ondulata, movimenti sinuosi 
+                       evocano il flusso dell'acqua, nuove sonorità cromatiche crescono tra le pieghe della carta, 
+                       segni e colori affiorano nel continuo sovrapporsi delle strisce. 
+                       Nel viaggio tra parole e immagini i riferimenti poetici colloquialiano con gli slittamenti 
+                       del segno, i percorsi di lettura stimolano il piacere degli occhi, le combinazioni 
+                       verbo-visive annullano le reciproche differenze, il libro è concepito come racconto 
+                       tattile e visivo, luogo di decantazione dei linguaggi in reciproca simbiosi (Segni e 
+                       versi in equilibrio, 2008). 
+                       L'insieme di incisioni e litografie raccolte sotto il titolo Il solco del pennino 
+                       (2004) accompagna sette poesie di Meeten Nas in una raffinata edizione curata da 
+                       Giorgio Upiglio e Monia Pavone, con composizione e stampa tipografica di Rodolfo Campi. 
+                       Le immagini di Ferrante si integrano con "il corpo e la voce" dei testi, le mutevoli 
+                       grafie seguono il tremito diffuso dei versi, entrano e sconfinano dal ritmo compositivo, 
+                       talvolta si espandono sulla doppia pagina, in altri casi si muovono intorno allo scritto, 
+                       oppure sono imperturbabili oasi di luce che fronteggiano la compostezza delle righe. 
+                       Le strategie del segno partecipano al rito provvisorio della scrittura, il ripetersi 
+                       del tempo segue le tracce disseminate nello spazio, senza mai ignorare che dal solco 
+                       del pennino possano nascere gli alfabeti del possibile, segni involontari che scrutano 
+                       l'ignoto. 
+                       I libri editi da Pulcinoelefante, realizzati con la collaborazione di Alberto Casiraghy, 
+                       si nutrono di frammenti di carta, collage di incisioni, raffinate combinazioni di elementi 
+                       prelevati dal repertorio già collaudato dall'artista, eppure in grado di suggerire nuove 
+                       oggettivazioni. 
+                       Sulle pagine sono incluse le memorie del passato, reperti prelevati dal presente, presagi 
+                       di un futuro possibile, supporti per una lettura verbo-visiva che sfiora la dimensione del 
+                       sogno, il volo delle favole, l'incanto dell'Oriente ma anche nuovi sentori d'Occidente, 
+                       esperienze stratificate che fanno di ogni libro un oggetto prezioso, irripetibile.</br>
+                       <br>Il ciclo di collage Messaggi dalla notte (2007-2011) mostra il palpitare simultaneo 
+                       di soffi materici, sensazioni tattili, respiri dentro e fuori i perimetri del visibile, 
+                       il vinavil tiene tutto insieme fissando i molteplici registri che l'artista varia come se
+                       fossero tocchi sulla sua tastiera. 
+                       "Sotto il calmo furore delle sue dita la carta liberamente prende forma, si libera" recita 
+                       uno scritto di Roberto Carusi, attento nel cogliere gli attimi in cui gli assemblaggi 
+                       creano imprevedibili consistenze con pieghe, tagli e aggetti di vari spessori. 
+                       Carte a mano e pellicole artificiali, cartine d'argento e oro, fotocopie di incisioni e 
+                       frammenti originali, minimi segni d'affezione che l'artista trasforma senza sosta, 
+                       lavorando nelle ore del giorno e anche di notte. 
+                       Si tratta di un laboratorio polimaterico dove Ferrante si diverte a modificare ciò 
+                       che ha già fatto, a saggiare in modo nuovo le fibre della carta, sollecitando altri 
+                       incontri tra segno e colore attraverso il fervore combinatorio delle forme aperte e chiuse. 
+                       In questa ricerca un sentire artigianale, l'artista si lascia andare allo stupore dei gesti 
+                       elementari: strappare, ritagliare, incollare, aggiungere, sottrarre, accartocciare, comprimere, 
+                       accettando con naturalezza gli esiti casuali della materia. 
+                       "A Simonetta piace l'imprevisto" ha scritto Angela Madesani. "Le cose devono uscire da sole, 
+                       senza forzatura alcuna. Aggredire non serve, rincorrere spasmodicamente neppure".
+                       Il metodo aggregativo diventa il vero soggetto dell'opera, non contano più i temi figurali, 
+                       ma l'esercizio del fare come quotidiana scoperta di nuove avventure, altre emozioni da assemblare, 
+                       messaggi da inviare con il piacere di lasciare il lettore libero di ascoltarli a modo suo. 
+                       Sempre più - in questi anni di ritrovato impegno creativo - Ferrante sente il fascino delle 
+                       tecniche come desiderio di assecondare alchimie sconosciute, dissolvenze e disgregazioni, 
+                       stratificazioni e frantumazioni, eventi che sorprendono l'occhio nell'attimo in cui il segno 
+                       si mostra e svanisce, partecipa ai ritmi costruttivi e si disperde in attimi evanescenti. 
+                       "Una scrittura astratta fatta di pennellate morbide - ha posto in evidenza Anna Ronchi - 
+                       oppure di segni più taglienti dovuti alle varie penne, trasformate poi sotto l'azione 
+                       dell'acido che incide la lastra"6. 
+                       Tra le tecniche preferite nel campo dell'incisione, la maniera a zucchero favorisce la 
+                       fluidità del tratto, la scorrevolezza del segno contrapposto al tono delle zone acquatintate, 
+                       con esiti di maggiore o minore densità, a seconda della consistenza c o n cui l'inchiostro 
+                       aderisce alla superficie. Avvalendosi di collaboratori di raffinata sapienza incisoria, 
+                       l'artista sperimenta quel rapporto tra velocità segnica e campitura tonale che garantisce 
+                       risultati sempre in sintonia con la sua visione.</br>
+                       <br>Nella serie Lasciti della mano (1998) la grafia impulsiva del gesto dialoga con le 
+                       cangianze della luce lasciando che le linee si aggroviglino intorno a nuclei aerei e indistinti, 
+                       talvolta segnati da segmenti aperti e spezzati, punto d'incontro tra gestualità informe e astrazione 
+                       costruttiva. 
+                       L'elogio della mano è posto in un'accezione particolare, dopo gli studi iniziali di "calligrafia formale" 
+                       Ferrante si rende conto che la sua grafia personale è andata cambiando, tracciando inconsciamente 
+                       segni rispondenti a impulsi diversi, "segni con le ali", come li ha recentemente definiti 
+                       Elisabetta Longar. 
+                       Molteplici sono gli strumenti della pratica calligrafica usati per raggiungere qualità estetiche 
+                       migliori: pennini, bambù, pezzi di legno, strumenti a pettine, penne d'oca tagliate in vario modo, 
+                       arnesi di metallo per incidere le lastre. Anche il tipo di carta assume un ruolo importante, 
+                       prevale l'uso di carte pregiate che permettono una resa cromatica eccellente, carte artigianali 
+                       filigranate, insomma un mondo di materie e strumenti appresi durante la frequentazione di Giorgio 
+                       Upiglio, sempre generoso nel prodigare consigli agli artisti. 
+                       Le incisioni su lastra di rame realizzate con i suoi torchi sono tra le opere più aperte agli 
+                       spericolati automatismi del gesto, ai controlli audaci della mano, soprattutto alle situazioni 
+                       dove il segno inizia a frusciare nel bagliore delicato dei colori, e poi scava dentro sé stesso, 
+                       fino a svanire. 
+                       Tracce nere e ombre vaporose stimolano i sensi interiori, macchie disgregate oscillano morbide e 
+                       leggere, sono tramiti per movimenti altalenanti e risoluti, scatti per inoltrarsi nell'infinito 
+                       vuoto. 
+                       Eteree risonanze congiungono i pensieri quotidiani al senso dell'inafferrabile, qualcosa di 
+                       inatteso sospinge lo sguardo oltre i parametri consueti (Il vento dell'Estremo Oriente, 2007), 
+                       la mano lascia traccia di sé senza chiedere alcun commento, alcuna spiegazione. 
+                       Il lettore è attratto dagli eventi che nascono tra visibile e invisibile, è turbato dall'incanto 
+                       che affiora senza preavviso (Un miracolo tra tanti, 2011), la mente s'inebria di fronte alla 
+                       purezza di spazi sconfinati, ciò che è lontano sembra vicinissimo, ciò che appare silenzioso 
+                       si tramuta nell'instabile tumulto delle forme. Che sia voglia di Cina o di Giappone poco 
+                       importa, ciò che conta è il desiderio leggiadro e spensierato di rinnovare l'atto vitale del 
+                       dipingere amplificando la capacità di cogliere l'essenza delle cose, unica aspirazione degna 
+                       di approfondimento. 
+                       Sul versante della scultura, si osservano piccole opere in cartapesta e struttura metallica 
+                       (2000), inoltre suggestive vetrofusioni a colori (2009), o infine una cornice sovrapposta 
+                       obliquamente a un tessuto plastico stampato. Sono in atto anche progetti di installazioni 
+                       che consentono una fluttuazione più ampia delle reti metalliche, supporti cartacei, 
+                       reperti di varia consistenza entrano in collisione armonica tra di loro suggerendo 
+                       sconfinamenti ambientali, coinvolgenti slanci spaziali. 
+                       Ma la ricerca più originale è suggerita dai Messaggi dalla notte trasparente (2015), 
+                       scritture monocrome su plexiglass traforato e lavorato con il laser, tessiture mutevoli 
+                       del bianco che risaltano sul nero di fondo, con forme vuote che galleggiano nelle galassie 
+                       cosmiche. Come sempre, Ferrante realizza spazi luminosi e leggeri, indefiniti e fuggevoli, 
+                       e sceglie - come in questo caso - i materiali più idonei per sospingere la soglia della 
+                       pittura verso trame inquiete e orditi palpitanti, seguendo il libero fluire della luce nelle 
+                       sincronie del segno e colore.
+                    </p> 
+            </div> 
+        </div>
+
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#" class="back-to-top">Torna su</a>
+                <a href="../magazine.pdf" class="pdf-link" target="_blank">Scarica il magazine</a>
+            </div>
+        </footer>
+
+        <script src="../script.js"></script>
+    </body>
+</html>

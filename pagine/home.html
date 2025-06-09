@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simonetta Ferrante</title>
+        <link rel="stylesheet" href="style.css" id="style-theme">
+    </head>
+    <body class="body">
+        <div class="navbar">
+            <div class="islanav">
+                <button class="nav-link"  onclick="changeMode()">X</button>
+            </div>
+            <div class="islanav">
+                <div></div>
+                <div class="dropdown">
+                    <a href="home.html" class="nav-link">Home</a>
+                    <div class="dropdown-content">
+                        <a href="#editoriale" class="dropdown-item">La memoria del visibile: segno, colore, ritmo e calligrafie</a>
+                        <a href="#magazine" class="dropdown-item">Il magazine</a>
+                        <a href="#crediti" class="dropdown-item">Crediti e informazioni</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="pagine/biografia.html" class="nav-link">Biografia</a>
+                    <div class="dropdown-content">
+                        <a href="pagine/biografia.html#note-curatori" class="dropdown-item">Note dei curatori</a>
+                        <a href="pagine/biografia.html#linea-tempo" class="dropdown-item">Linea del tempo</a>
+                        <a href="pagine/biografia.html#liberta-londinese" class="dropdown-item">La libertà londinese. L'asse Milano-Londra come paradigma di modernità.</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="pagine/grafica.html" class="nav-link">Grafica</a>
+                    <div class="dropdown-content">
+                        <a href="pagine/grafica.html#graphic-designer" class="dropdown-item">Simonetta Ferrante graphic designer: costruzione compositiva, creatività e fantasia</a>
+                        <a href="pagine/grafica.html#progetto-corrispondenza" class="dropdown-item">Il progetto della corrispondenza</a>
+                    </div>
+                </div>
+                <a href="pagine/pittura.html" class="nav-link">Pittura</a>
+                <div class="dropdown">
+                    <a href="pagine/calligrafia.html" class="nav-link">Calligrafia</a>
+                    <div class="dropdown-content">
+                        <a href="pagine/calligrafia.html#scrittura-astratta" class="dropdown-item">La scrittura astratta di Simonetta Ferrante</a>
+                        <a href="pagine/calligrafia.html#paesaggio-frammenti" class="dropdown-item">Un paesaggio di frammenti calligrafici</a>
+                        <a href="pagine/calligrafia.html#paesaggi-calligrafici" class="dropdown-item">Paesaggi calligrafici. Una delicata danza di lettere</a>
+                    </div>
+                </div>
+                <a href="pagine/intervista.html" class="nav-link">Intervista</a>
+                <div></div>
+            </div>
+        </div>
+        
+        <div class="container_home">
+            <div class="container_capitolo">
+                <h1 style="padding-bottom: 0" style="padding-top: 0">Simonetta Ferrante</h1>
+                    <div class="sottotitolo">
+                       <h2 id="editoriale" style="font-size: 18pt" style="padding-top: 10px">La memoria del visibile: segno, colore, ritmo e calligrafie</h2>
+                       <h3 style="font-size: 15pt">Editoriale</h3>
+                        <p>
+                            La prima edizione di <b>"Simonetta Ferrante, la memoria del visibile: segno, colore, ritmo e calligrafie"</b> si occupa di tradurre l'omonimo libro riguardante la mostra tenuta dall'artista nel <b>2016 al m.a.x. museum di Chiasso</b>. Una mostra pensata non solo come raccolta di opere, ma come percorso visivo e mentale attraverso la memoria: una memoria che si fa forma, gesto, stratificazione.
+                           <br>La traduzione avviene tramite una rielaborazione dell'ordine dei capitoli del catalogo di <b>Nicoletta Ossanna Cavadini</b> e <b>Claudio Cerritelli</b>, un libro concepito come prolungamento e custodia del progetto espositivo. Il magazine rielabora i capitoli, suddividendoli in cinque rubriche, cercando di creare un percorso che segue la carriera dell'artista.</br>Questa prima edizione, dedicata alla graphic designer, calligrafa e artista Simonetta Ferrante, vuole raccontare <i>la storia di una donna che ha influenzato il graphic design italiano.</i> Il volume indaga le sue origini, l'evoluzione delle sue passioni, le persone che l'hanno aspirata ed aiutata, le difficoltà che ha incontrato e l'evoluzione della sua carriera.
+                           <br>Un'intervista esclusiva mostra il suo punto di vista, le sensazioni che ha provato e le soddisfazioni raggiunte ripercorrendo la sua vita.</br>                            
+                        </p>
+                    </div>
+            </div>
+        </div>
+        <div class="container_carousel" style="padding-bottom: 40px">
+            <section class="carousel">
+                <p id="carousel-counter" class="carousel-counter">1 / 4</p>
+                <div class="control left-control">
+                    <button id="prev-btn" onclick="scrollToItem(currentItem - 1);">
+                        <!-- Ho incollato un'immagine svg come icona previous -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                          <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/>
+                        </svg>
+                      </button>
+                </div>
+                <div class="control right-control">
+                    <button id="next-btn" onclick="scrollToItem(currentItem + 1);">
+                        <!-- Ho incollato un'immagine svg come icona next -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="bullet-container" class="bullet-container">
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                </div>
+                <ul id="carousel-list" class="carousel-list">
+                    <li class="carousel-item">
+                        <img src="./img/home/simonetta.jpg"/>
+                        <div class="carousel-caption">Simonetta Ferrante, ritratto fotografico</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="./img/home/foto_1.png"/>
+                        <div class="carousel-caption">La gioia di scrivere (da un verso di Wislawa Szymborska), 2001</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="./img/Alfabeto basco (2013) copia.jpg"/>
+                        <div class="carousel-caption">Alfabeto basco, 2013 - Tecnica mista su carta</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="./img/Alberi fermi (2007) copia 2.jpg"/>
+                        <div class="carousel-caption">Alberi fermi, 2007 - Tecnica mista su carta</div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+            <h2 id="magazine" style="padding-top: 30px" style="padding-bottom: 10px">La memoria del visibile:<br>il magazine</br></h2>
+            <div class="container_carousel" style="margin-top:20px">
+                <section class="carousel">
+                    <ul id="pdf-list" class="carousel-list">
+                        <li class="carousel-item">
+                            <iframe src="magazine.pdf" class="pdf-viewer"></iframe>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        <div class="container_home">
+            <div class="container_capitolo">
+                <div class="sottotitolo">
+                    <h2 id="crediti">Crediti e informazioni</h2>
+                    <h3>Collana DesignVerso 2025</h3>
+                        <p>
+                            DesignVerso è una collana editoriale immaginaria nata
+                            nel 2014, che raccoglie una serie di prototipi periodici
+                            didattici monografici, stampati digitalmente e aumentati
+                            da contenuti audiovisivi. 
+                            <br>I testi sono tratti da libri e
+                            articoli, gestiti dagli studenti consapevoli della legge sulla
+                            protezione del diritto d'autore.</br>
+                        </p>
+                    <h3>Curatori</h3>    
+                        <p>
+                            Chiara Geronimi
+                            <br>Nicole Mordocco</br>
+                            Chiara Moretti
+                            <br>Marta Perregrini</br>
+                            Francesca Vigevani
+                        </p>
+                    <h3>Laboratorio di Grafica Editoriale 2024_2025 — C2</h3>
+                        <p>
+                            Scuola del Design | Politecnico di Milano
+                            <br>Corso di Laurea Triennale in Design della Comunicazione</br>
+                        </p>
+                    <h3>Partner</h3>
+                        <p>AIAP — Centro di Documentazione sul Progetto Grafico</p>
+                    <div class="container_img1">
+                        <img src="../SITO/img/home/logo_aiap.svg" style="padding-bottom: 20px">
+                        <div class="carousel-caption">Simonetta Ferrante, 1950</div>
+                    <h3>Progetto del Logo di DesignVerso</h3>
+                        <p>Greta Franco</p>
+                        <img src="../SITO/img/home/logo_designverso.svg" style="padding-bottom: 20px">
+                    </div>
+                    <h3>Font</h3>
+                        <p>Sole serif, Satoshi, Helvetica</p>
+                    <h3>Carta utilizzata</h3>
+                        <p>Vent Noveau V-F5 white (122 g/mq)</p>
+                    <div class="container_img2">
+                        <img src="../SITO/img/home/logo_poli.svg" style="height: 350px">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#" class="back-to-top">Torna su</a>
+                <a href="magazine.pdf" class="pdf-link" target="_blank">Scarica il magazine</a>
+            </div>
+        </footer>
+
+        <script src="./script.js"></script>
+    </body>
+</html>

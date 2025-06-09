@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Biografia</title>
+        <link rel="stylesheet" href="../style.css" id="style-theme">
+    </head>
+    <body class="body">
+        <div class="navbar">
+            <div class="islanav">
+                <button class="nav-link"  onclick="changeMode()">
+                    <img src="../img/home/mezzaluna1.svg" alt="Dark mode toggle" style="width: 20px; height: 20px;">
+                </button>
+            </div>
+            <div class="islanav">
+                <div></div>
+                <div class="dropdown">
+                    <a href="/" class="nav-link">Home</a>
+                    <div class="dropdown-content">
+                        <a href="/#editoriale" class="dropdown-item">La memoria del visibile: segno, colore, ritmo e calligrafie</a>
+                        <a href="/#magazine" class="dropdown-item">Il magazine</a>
+                        <a href="/#crediti" class="dropdown-item">Crediti e informazioni</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="/pagine/biografia.html" class="nav-link">Biografia</a>
+                    <div class="dropdown-content">
+                        <a href="/pagine/biografia.html#note-curatori" class="dropdown-item">Note dei curatori</a>
+                        <a href="/pagine/biografia.html#linea-tempo" class="dropdown-item">Linea del tempo</a>
+                        <a href="/pagine/biografia.html#liberta-londinese" class="dropdown-item">La libertà londinese. L'asse Milano-Londra come paradigma di modernità.</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="/pagine/grafica.html" class="nav-link">Grafica</a>
+                    <div class="dropdown-content">
+                        <a href="/pagine/grafica.html#graphic-designer" class="dropdown-item">Simonetta Ferrante graphic designer: costruzione compositiva, creatività e fantasia</a>
+                        <a href="/pagine/grafica.html#progetto-corrispondenza" class="dropdown-item">Il progetto della corrispondenza</a>
+                    </div>
+                </div>
+                <a href="/pagine/pittura.html" class="nav-link">Pittura</a>
+                <div class="dropdown">
+                    <a href="/pagine/calligrafia.html" class="nav-link">Calligrafia</a>
+                    <div class="dropdown-content">
+                        <a href="/pagine/calligrafia.html#scrittura-astratta" class="dropdown-item">La scrittura astratta di Simonetta Ferrante</a>
+                        <a href="/pagine/calligrafia.html#paesaggio-frammenti" class="dropdown-item">Un paesaggio di frammenti calligrafici</a>
+                        <a href="/pagine/calligrafia.html#paesaggi-calligrafici" class="dropdown-item">Paesaggi calligrafici. Una delicata danza di lettere</a>
+                    </div>
+                </div>
+                <a href="/pagine/intervista.html" class="nav-link">Intervista</a>
+                <div></div>
+            </div>
+        </div>
+        <div class="container_carousel" style="margin-top: 120px;">
+            <section class="carousel">
+                <p id="carousel-counter" class="carousel-counter">1 / 4</p>
+                <div class="control left-control">
+                    <button id="prev-btn" onclick="scrollToItem(currentItem - 1);">
+                        <!-- Ho incollato un'immagine svg come icona previous -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                          <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/>
+                        </svg>
+                      </button>
+                </div>
+                <div class="control right-control">
+                    <button id="next-btn" onclick="scrollToItem(currentItem + 1);">
+                        <!-- Ho incollato un'immagine svg come icona next -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="bullet-container" class="bullet-container">
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                </div>
+                <ul id="carousel-list" class="carousel-list">
+                    <li class="carousel-item">
+                        <img src="../img/intervista/intervista.jpeg"/>
+                        <div class="carousel-caption">Nicoletta Ossanna Cavadini con Simonetta Ferrante (2016)
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/intervista/simo(p.67).jpeg"/>
+                        <div class="carousel-caption">Simonetta Ferrante nel suo atelier<br>Milano (2015)</br>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/intervista/nonno.jpeg"/>
+                        <div class="carousel-caption">Attilio Calabi (nonno materno) con la piccola Simonetta Ferrante <br>in braccio nel giardino di Villa Calabi a Vacciago d'Ameno (circa 1931)</br>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/intervista/huber(p.29).jpeg"/>
+                        <div class="carousel-caption">Max Huber<br>disegno dal logotipo de La Rinascente (1950)</br>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/intervista/cartina(p.95).jpeg"/>
+                        <div class="carousel-caption">Graphic design Simonetta Ferrante, Gianni Rossi - EPT Milano<br>Pieghevole con cartina di Milano (1969-1970)</br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/intervista/cartina2(p.95).jpeg"/>
+                        <div class="carousel-caption">Graphic design Simonetta Ferrante, Gianni Rossi - EPT Milano<br>Pieghevole con cartina di Milano (1969)</br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/intervista/mostra.jpeg"/>
+                        <div class="carousel-caption">Tavoli con alcuni lavori di Simonetta Ferrante<br>London Central School of Arts and Crafts (1958)</br>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/intervista/pag.101.jpeg"/>
+                        <div class="carousel-caption">Menù Birreria-ristorante Splügen Bräu (circa 1960)<br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</br>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/intervista/pag.101(2).jpeg"/>
+                        <div class="carousel-caption">Cartoncino pubblicitario (1970-1975)<br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</br>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/intervista/beatrice.jpeg"/>
+                        <div class="carousel-caption">Simonetta Ferrante con Beatrice Kuenzy (Edinburgh, 1958)</br>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/intervista/pag.72.jpeg"/>
+                        <div class="carousel-caption">Layout scolastico su cartone<br>Locandina (London, 1958)</br>Milano, Centro di Progettazione sul Progetto Grafico di AIAP (AIAP CDPG)
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/intervista/layout(p.75).jpeg"/>
+                        <div class="carousel-caption">Layout scolastico su cartone<br>Locandina (London, 1958)</br>Milano, Centro di Progettazione sul Progetto Grafico di AIAP (AIAP CDPG)
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/intervista/depliant(p.81).jpeg"/>
+                        <div class="carousel-caption">Dèpliant 3M - minnesota S.p.A. (1961)<br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</br>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/intervista/depliant1(pa.81).jpeg"/>
+                        <div class="carousel-caption">Dèpliant 3M - minnesota S.p.A. (1961)<br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</br>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/intervista/locandina(p.89).jpeg"/>
+                        <div class="carousel-caption">Locandina "io, Milano" (1967)<br>Milano, Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</br>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="container">
+            <div class="container_capitolo">
+               <div class="sottotitolo">
+               <h2>Intervista a Simonetta Ferrante</h2>
+                  <h3>a cura di Nicoletta Ossanna Cavadini</h3>
+                </div> 
+            </div>
+            <div class="container_date" style="padding-bottom: 40px">    
+                <div>
+                    <h4>Nicoletta Ossanna Cavadini</h4>
+                    <p>Lei fin da giovanissima ha indirizzato i suoi interessi verso l'arte,
+                         la grafica e la comunicazione visiva. Si ricorda come è iniziata 
+                         questa passione che l'ha accompagnata per tutta la vita? 
+                    </p>
+                </div>
+                <div>
+                    <h4>Simonetta Ferrante</h4>
+                    <p>Ricordo vagamente che a dodici anni sono stata scoperta - se così 
+                        si può dire - dall'artista Antonio Calderara che abitava vicino alla 
+                        casa dei nonni nel periodo di guerra con i bombardamenti in corso. 
+                        Lui aveva una figlia della mia età di nome Gabriella con cui ho fatto 
+                        amicizia, però dopo poco si è ammalata di leucemia ed è morta nel 1944. 
+                        Calderara mi ha dato le prime lezioni di disegno e di pittura a olio e 
+                        mi ha spinto a coltivare l'arte e lo studio dei grandi maestri. 
+                        La sua formazione era figurativa, influenzata dalla corrente Novecento, 
+                        affascinato da Piero della Francesca e Georges Seurat, ma anche da Giorgio 
+                        Morandi, Guido Guidi e Antonio Donghi. Era approdato poi, proprio in quegli 
+                        anni, all'Astrattismo sulla scia di Josef Albers, Piet Mondrian, Almir da 
+                        Silva Mavignier e Max Bill. Nel 1944 ho iniziato a frequentare il liceo 
+                        scientifico, perché durante la guerra non avevo scelta; terminato il secondo 
+                        conflitto mondiale mi sono iscritta al liceo artistico parificato, ma questo 
+                        era tenuto dalle suore Orsoline che non coltivavano un particolare aggiornamento 
+                        verso la contemporaneità, così cercavo all'esterno gli stimoli artistici.
+                    </p>
+                </div>
+                <div>
+                    <h4>N.O.C.</h4>
+                    <p>In questi anni si ricorda particolari influenze o fascinazioni verso 
+                        artisti contemporanei?</p>
+                </div>
+                <div>
+                    <h4>S.F.</h4>
+                    <p>Avrei desiderato molto frequentare il liceo artistico a Brera e poi l'Accademia, 
+                        ma i miei genitori, timorosi dell'originalità di tali ambienti, non me l'hanno 
+                        consentito. Conseguentemente non ero molto al corrente sull'arte contemporanea, 
+                        andavo a vedere mostre ma non in maniera assidua. Conoscevo Felice Casorati, il 
+                        quale - fra l'altro — era molto amico dei miei nonni paterni, che ho avuto modo 
+                        di rincontrare nel 1959, rientrata da Londra. Casorati mi aveva incitato a proseguire 
+                        gli studi artistici e in particolar modo la pittura, indirizzandomi da Primo Conti 
+                        a Firenze, ma io desideravo rendermi indipendente ed ero particolarmente attratta 
+                        dal graphic design</p>
+                </div>
+                <div>
+                    <h4>N.O.C.</h4>
+                    <p>Lei consegue la maturità artistica nel 1948, poco dopo ottiene anche il diploma di 
+                        pianoforte al conservatorio Giuseppe Verdi di Milano. Arte e musica sono quindi le 
+                        sue passioni? 
+                    </p>
+                </div>
+                <div>
+                    <h4>S.F.</h4>
+                    <p>Sì, certamente la passione per l'arte e la musica mi accompagna da tutta la vita. 
+                        Il diploma in pianoforte al conservatorio però l'ho conseguito perché questa era una 
+                        "conditio sine qua non" imposta da mia madre per poter proseguire gli studi artistici 
+                        a Londra. Ricordo in particolare il sacrificio di dover studiare musica anche per sei 
+                        ore al giorno. Inoltre, ero timida e trovavo molta difficoltà a esibirmi in pubblico 
+                        nei saggi; quindi, avevo capito che quella non era la mia strada. La musica classica, 
+                        però, mi ha accompagnato nel profondo per tutta la vita, in particolar modo Mozart e Bach.</p>
+                </div>
+                <div>
+                    <h4>N.O.C.</h4>
+                    <p>Dopo la maturità artistica lei desidera continuare gli studi nel settore della grafica applicata, come mai?</p>
+                </div>
+                <div>
+                    <h4>S.F.</h4>
+                    <p>In quegli anni il graphic design mi affascinava particolarmente grazie anche ai continui 
+                        racconti del nonno Attilio Calabi che è stato il primo direttore de la Rinascente, lui 
+                        aveva molti contatti con i grafici e conosceva direttamente Marcello Dudovich, e infatti 
+                        me lo ha presentato impedendomi però di frequentarlo assiduamente perché lo considerava 
+                        un essere amorale. Con una maggiore maturità avevo capito che la strada del graphic design 
+                        era quella che volevo intraprendere. Finito il liceo artistico ho sostenuto gli esami per 
+                        poter insegnare nelle scuole e sono andata a Roma in quanto mia cugina Tullia Calabi aveva 
+                        sposato l'architetto Bruno Zevi, e nel suo studio ho preparato il tema per l'esame di 
+                        ammissione dell'abilitazione all'insegnamento. Zevi è stato con me molto gentile, 
+                        ricordo con piacere il periodo in cui ho frequentato il suo studio, durante un soggiorno romano. 
+                        Successivamente ho insegnato a Magenta e a Milano per circa due anni, ma non mi piaceva, 
+                        i programmi scolastici erano molto costrittivi e non incontravano l'interesse dei ragazzi; 
+                        il vero e solo problema era tenere la disciplina. Così ho deciso di completare gli studi superiori 
+                        frequentando una scuola superiore di grafica</p>
+                </div>
+                <div>
+                    <h4>N.O.C.</h4>
+                    <p> A questo punto come è caduta la scelta sulla Central School of Arts and Crafts di Londra?</p>
+                </div>
+                <div>
+                    <h4>S.F.</h4>
+                    <p> Max Huber, da cui ero andata in studio per svolgere i primi apprendimenti sul graphic design, 
+                        mi aveva consigliato di frequentare la Kunstgewerbeschule a Zurigo, ma io non conoscevo il tedesco, 
+                        si trattava inoltre di dover superare un esame d'ammissione e trascorrere almeno tre-quattro anni 
+                        fuori casa. Nello stesso periodo mio zio mi ha presentato a Giovanni Pintori, il celebre grafico 
+                        della Olivetti, che conosceva un altro grafico professionista — sempre in Olivetti - a Londra, 
+                        il quale gli aveva consigliato per il mio tipo di interessi culturali la Central School of Arts 
+                        and Crafts. Quindi ho mandato il mio portfolio con diversi elaborati e sono stata accettata, 
+                        la gioia in quel momento era tanta. Potevo finalmente partire per Londra!</p>
+                </div>
+                <div>
+                    <h4>N.O.C.</h4>
+                    <p>Come è stato il suo approccio con la capitale inglese nel secondo dopoguerra?</p>
+                </div>        
+                <div>
+                    <h4>S.F.</h4>
+                    <p>
+                        Inizialmente il primo impatto è stato abbastanza scioccante, avevo ventotto anni e una preparazione 
+                        svolta in Italia, che in quegli anni era un Paese fortemente cattolico e tradizionalista. Tutto d'un 
+                        colpo mi sono trovata a Londra, in un luogo cosmopolita ove vi erano culture e religioni diverse, 
+                        dove gli studenti della scuola che frequentavo arrivavano da tutto il mondo e, soprattutto, mi 
+                        dovevo confrontare con un insegnamento completamente diverso. I docenti, infatti, applicavano un metodo 
+                        molto più intuitivo e meno scolastico, libero e aperto, con uno scambio di idee fra docente e allievo 
+                        a dir poco entusiasmante, capace di stimolare molto sia lo sviluppo formativo che quello intellettuale. 
+                        All'interno dell'offerta didattica potevamo scegliere alcuni corsi facoltativi come fotografia o litografia, 
+                        e poi vi erano i laboratori dove singolarmente noi studenti potevamo stampare i nostri elaborati. Gli insegnanti 
+                        dei vari corsi davano delle indicazioni generali e poi noi dovevamo svolgerle in maniera indipendente, facendo 
+                        capo a una fornita biblioteca dell'istituto. Ricordo con piacere il corso di typography e di basic design, 
+                        che erano i miei preferiti. Tra i docenti che mi hanno maggiormente formata ricordo però Cecil Collins, 
+                        che aveva un particolare carisma e sapeva entusiasmare i giovani. Lui teneva dei corsi serali di pittura 
+                        e disegno e ci ha spinto anche a meditare. In Inghilterra era una figura molto nota, oggi alcune sue opere 
+                        sono esposte alla Tate Modern Gallery. La sua umanità e capacità di insegnamento erano coinvolgenti. 
+                    </p>
+                </div>
+                <div>
+                    <h4>N.O.C.</h4>
+                    <p>Cosa ricorda di Max Huber in questo periodo?</p>
+                </div>
+                <div>
+                    <h4>S.F.</h4>
+                    <p> Max Huber aveva in quegli anni lo studio prima in via Peri e poi in via Appiani. Con lui collaboravano 
+                        Heinz Waibl e sua moglie Nene, che erano miei coetanei. Ricordo che Max Huber arrivava in studio con 
+                        una piccola bicicletta smontabile, modello dell'esercito americano, aveva sempre con sé una bottiglia 
+                        di whisky che offriva a tutti gli amici. Era piuttosto introverso, ma gli sono molto grata perché mi ha 
+                        accettato subito nel suo studio: era generoso e molto aperto verso i giovani, anche se il suo modo di
+                        fare non era particolarmente affabile e a volte appariva rude. Huber aveva rapporti importanti con Achille 
+                        e Pier Giacomo Castiglioni, e attraverso loro anche con altri importanti professionisti del settore presso 
+                        cui avevo lavorato precedentemente, in particolare Pier Giacomo, al quale ero stata presentata.</p>
+                </div>
+                <div>
+                    <h4>N.O.C.</h4>
+                    <p>Rientrata a Milano è andata a lavorare nello studio di Bob Noorda, per scelta o per casualità? </p>
+                </div>
+                <div>
+                    <h4>S.F.</h4>
+                    <p>Avevo il desiderio di lavorare in uno studio professionale diverso dai precedenti per completare la 
+                        mia esperienza. Con il mio portfolio composto da disegni, fotografie e curriculum avevo visitato 
+                        diversi professionisti, come facevamo tutti noi giovani dell'epoca. Ricordo inizialmente di essere 
+                        stata presso il rinomato Studio Boggeri e vi avevo lavorato per un po' di tempo, in seguito ero andata a 
+                        presentarmi da Bob Noorda appunto, che da poco era arrivato dall'Olanda e che mi ha subito accettata. 
+                        Sono stata la sua prima assistente. L'impatto iniziale non fu semplice perché Noorda era molto rigoroso, 
+                        usava un solo tipo di carattere tipografico, l'Helvetica, ed era di poche parole, e io dovevo sviluppare 
+                        gli incarichi dello studio in maniera abbastanza indipendente. Lui apprezzava di me lo sviluppo della 
+                        fantasia nel settore della grafica pubblicitaria e quindi eravamo complementari. Ad esempio, quando morì 
+                        sua madre rientrò improvvisamente in Olanda e dovetti seguire io i pannelli per uno stand della Fiera di Milano. 
+                        Noorda in quel periodo stava svolgendo importanti incarichi, ricordo in particolare quelli per Pirelli e Farmitalia, 
+                        e iniziava a occuparsi anche del progetto grafico della metropolitana di Milano. Sicuramente, facendo un bilancio, 
+                        quello è stato il periodo di esperienza di settore più arricchente dal punto di vista professionale che io ricordi.</p>
+                </div>
+                <div>
+                    <h4>N.O.C.</h4>
+                    <p>Nel 1961 lei si mette in proprio, da cosa è dipesa questa scelta?</p>
+                </div>
+                <div>
+                    <h4>S.F.</h4>
+                    <p> Come si suol dire, ero pronta a fare questo salto qualitativo, avevo acquisito una capacità di gestione dei 
+                        progetti grafici e mi sentivo in grado di aprire uno studio professionale indipendente. Nel frattempo, 
+                        avevo ricevuto alcuni incarichi significativi per la casa editrice Garzanti, vi lavoravo mezza giornata 
+                        in maniera continuativa impaginando dizionari illustrati; e poi sono andata in Bompiani, in quanto avevo 
+                        conosciuto da amici Bruno Munari, che mi ha proposto di aiutarlo nell'impaginazione del libro intitolato 
+                        Invenzioni e scoperte. Lui era un creativo e aveva bisogno di una collaborazione per la parte di composizione 
+                        grafica. A questo poi è seguita una collaborazione per la casa editrice Görlich a Paderno Dugnano, 
+                        per l'impaginazione di riviste. Sono seguiti altri lavori per Birra Poretti, dove lavorava anche Max Huber, 
+                        e per i Supermercati Esselunga, tramite i contatti avuti prima con Alberto Galgano e poi con Bernardo Caprotti.</p>
+                </div>
+                <div>
+                    <h4>N.O.C.</h4>
+                    <p>Come nasce l'idea del manifesto per i Supermercati Esselunga con lo scontrino?</p>
+                </div>
+                <div>
+                    <h4>S.F.</h4>
+                    <p>I rapporti con i committenti, e con Bernardo Caprotti in particolare, non erano sempre facili, ma l'idea - nata 
+                        dalla collaborazione con la copyrigther Bianca Ramorino - di inserire nella campagna pubblicitaria uno scontrino 
+                        in cui si vedesse il reale costo basso della spesa effettuata nei Supermercati Esselunga è piaciuta molto. 
+                        L'ho usato su uno sfondo con il logotipo disegnato da Huber e le fotografie di Serge Libiszewski scattate per 
+                        l'apposita campagna pubblicitaria del manifesto e della locandina. Tutta la comunicazione ha incontrato i 
+                        favori del pubblico in quanto risaltava nel panorama visivo dei poster pubblicitari affissi in quegli anni.</p>
+                </div>
+                <div>
+                    <h4>N.O.C.</h4>
+                    <p>Seguono in rapida successione molti altri lavori di graphic design, cosa ricorda in particolare?</p>
+                </div>
+                <div>
+                    <h4>S.F.</h4>
+                    <p>In quel periodo le richieste di pubblicità arrivavano una dopo l'altra. Ricordo con particolare piacere 
+                        la committenza dell'Ente Provinciale del Turismo (EPT si chiamava in quegli anni) diretto da Carlo Ripa di Meana, 
+                        che mi ha commissionato dei dépliant per la città di Milano; ho collaborato a questo progetto con entusiasmo 
+                        assieme a Gianni Rossi e sono nati i tre dépliant della città. La copertina per Rizzoli era stata realizzata 
+                        sempre in questo periodo grazie al contatto con Ripa di Meana, in tal caso l'ispirazione mi è venuta dal 
+                        titolo: La Formula dell'Immortalità. Nel 1963 l'IGAP (Impresa Generale Affissione e Pubblicità), che era stata 
+                        fondata da mio nonno Attilio Calabi, mi ha affidato l'esecuzione dei biglietti augurali. Poi è seguito 
+                        l'Almanacco intitolato io, Milano; in quel periodo avevo un'amica che lavorava per Garzanti ed era appassionata 
+                        di ricerche iconografiche, così abbiamo unito le forze ed è nato il libro su ispirazione storica dell'Almanacco 
+                        delle milanesi.</p>
+                </div>
+                <div>
+                    <h4>N.O.C.</h4>
+                    <p>Nel 1971 apre lo studio con Giovanna Graf, illustratrice svizzera: due donne titolari di uno studio grafico, 
+                       una vera sfida per quegli anni.</p>
+                </div>
+                <div>
+                    <h4>S.F.</h4>
+                    <p>Sì, ma non ce ne rendevamo conto. Giovanna Graf l'ho conosciuta tramite Serge Libiszewski, cercava qualcuno 
+                        per aprire uno studio associato. lo ero interessata e con molti contatti, così abbiamo preso questa decisione. 
+                        Lavoravamo in modo indipendente e ci confrontavamo vicendevolmente. Giovanna era molto amica di Lora Lamm e 
+                        teneva rapporti con la Rinascente, oltre a ricevere regolarmente l'incarico di fare annunci pubblicitari, 
+                        campagne stagionali e cataloghi. Assieme abbiamo creato un dépliant per un albergo di Panarea, poi lei si è 
+                        sposata e si è trasferita in un'altra città, nel Sud Italia, così ho iniziato a collaborare con Carlo Pollastrini.</p>
+                </div>
+                <div>
+                    <h4>N.O.C.</h4>
+                    <p>A partire dall'inizio degli anni Settanta lei si dedica intensamente alla grafica pubblicitaria per quindici anni. 
+                        Cosa ricorda in particolare?</p>
+                </div>
+                <div>
+                    <h4>S.F.</h4>
+                    <p>In questo periodo ho disegnato diversi logotipi, ricordo quello per la Società Italiana di Psicologia, il marchio per
+                        Theodore Trancu, quello per l'Associazione Astigiana Monferrina, oppure i diversi biglietti d'auguri per Helena Rubinstein, 
+                        o ancora tutta la corporate image per l'ottavo Congresso Internazionale di Psicoterapia, gli annunci pubblicitari 
+                        per Data Control, per la Galgano Associati e per l'Elettrocarbonium. Tutti studiati "ad hoc" in relazione con 
+                        la committenza.</p>
+                </div>
+                <div>
+                    <h4>N.O.C.</h4>
+                    <p>Nel 1990 ho aperto il Centro dell'Immagine e dell'Espressione, cosa l'ha spinta a passare dallo studio professionale 
+                        all'organizzazione di corsi a tema?</p>
+                </div>
+                <div>
+                    <h4>S.F.</h4>
+                    <p>Penso il desiderio di continua conoscenza. Organizzavo dei corsi con docenti e artisti che arrivavano da diverse parti 
+                        del mondo e che parlavano non solo di arte, pittura e calligrafia, ma anche di tessitura, design e musica per 
+                        comunicare le varie forme dell'espressione. È durato quasi quattro anni, poi ho capito che era un'utopia.</p>
+                </div>
+                <div>
+                    <h4>N.O.C.</h4>
+                    <p>La fascinazione per la parte calligrafica quando si sviluppa in lei?</p>
+                </div>
+                <div>
+                    <h4>S.F.</h4>
+                    <p> Direi proprio all'inizio degli anni Novanta, anche se in embrione l'avevo sempre coltivata, fin dal periodo della 
+                        formazione inglese presso la Central School of Arts and Crafts, dove già si tenevano corsi di calligrafie 
+                        occidentali che purtroppo, però, non avevo avuto tempo di frequentare. Da allora ho iniziato la meditazione yoga, 
+                        poi quella buddhista. Ho seguito corsi formali e informali di calligrafia in diverse altre parti del mondo. 
+                        In particolare, la conoscenza con l'artista calligrafo Brody Neuenschwander e con Thomas Ingmire hanno 
+                        contribuito notevolmente all'approfondimento tematico.</p>
+                </div>
+                <div>
+                    <h4>N.O.C.</h4>
+                    <p>Nella sua espressione artistica calligrafica spicca la versatilità verso le diverse tecniche adottate, 
+                        ce ne può parlare?</p>
+                </div>
+                <div>
+                    <h4>S.F.</h4>
+                    <p> Durante la formazione londinese ho avuto la fortuna di avere bravi maestri e di aver appreso le diverse 
+                        tecniche che ho cercato di applicare durante il mio percorso artistico, non fossilizzandomi, ma cercando 
+                        sempre un po' una sperimentazione molto aperta. Con i monotipi o gli inchiostri, per esempio, come anche i 
+                        collage su diversi supporti, ci si lascia stupire dall'esito, mentre la pittura a olio richiede maggiore 
+                        costruzione e l'acquerello maggiore estemporaneità. Invece all'incisione, pur conoscendola, mi sono 
+                        avvicinata molto nelle diverse possibilità tecniche quando avevo lo studio a Milano in via Fara, 
+                        in quanto ero proprio di fronte allo studio di Giorgio Upiglio che ho avuto la fortuna di conoscere. 
+                        Lui oltre a essere un grande incisore e conoscitore delle tecniche specifiche, comprendeva le 
+                        esigenze dei creativi, e per me ha rappresentato un vero mentore.</p>
+                </div>
+                <div>
+                    <h4>N.O.C.</h4>
+                    <p>La ricerca attuale sulla calligrafia però continua.</p>
+                </div>
+                <div>
+                    <h4>S.F.</h4>
+                    <p>Sì, continuo a produrre, compatibilmente con la resistenza fisica dovuta agli anni, mi piace molto 
+                        sperimentare il settore della calligrafia con vari materiali e analizzare i vari esiti. 
+                        Penso a questo proposito alle ultime sculture prodotte in plexiglass con tracce calligrafiche, 
+                        che sono le più recenti in ordine di tempo, dove segno e trasparenza giocano un ruolo comunicativo emozionale.</p>
+                </div>
+                <div>
+                    <h4>N.O.C.</h4>
+                    <p>Ci può indicare un messaggio che desidera trasmettere ai giovani d'oggi che intraprendono la carriera artistica?</p>
+                </div>
+                <div>
+                    <h4>S.F.</h4>
+                    <p>Ai giovani desidererei dire, con uno slogan, "usate di più le mani che il computer per riuscire a svolgere 
+                        l'attività creativa". Le mani sono un tramite del proprio vissuto interiore. Credo sia importante che l'atto 
+                        creativo parta da una gestualità per poi passare attraverso il filtro del computer, intendendo questa fase come puro 
+                        atto di esecuzione tecnica.</p>
+                </div>
+                <div>
+                    <h4>N.O.C.</h4>
+                    <p>In questo l'accomuna il pensiero di Bob Noorda che in una delle ultime interviste rilasciate nel 2005 ha affermato: 
+                        "Ai giovani consiglio di non usare troppo i computer, un buon progetto comincia dal disegno manuale. Il computer è 
+                        un serbatoio quasi infinito di soluzioni grafiche ma offre fin troppe possibilità, autorizza eccessi gratuiti di 
+                        fantasia che non fanno bene al progetto, perché infine lo complicano anziché semplificarlo. [...] Un lavoro ben 
+                        fatto deve sempre iniziare dal disegno manuale"</p>
+                </div>
+                <div>
+                    <h4>S.F.</h4>
+                    <p>Certamente, sono pienamente d'accordo con questa affermazione, anche se sottolineerei in particolare il rapporto 
+                        mano-pensiero in quanto è proprio attraverso il disegno e la gestualità che si attua un vero e proprio "transfer" 
+                        da parte del creativo.</p>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#" class="back-to-top">Torna su</a>
+            <a href="../magazine.pdf" class="pdf-link" target="_blank">Scarica il magazine</a>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

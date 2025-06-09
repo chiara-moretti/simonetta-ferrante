@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Biografia</title>
+        <link rel="stylesheet" href="../style.css" id="style-theme">
+    </head>
+    <body class="body">
+        <div class="navbar">
+            <div class="islanav">
+                <button class="nav-link"  onclick="changeMode()">
+                    <img src="../img/home/mezzaluna1.svg" alt="Dark mode toggle" style="width: 20px; height: 20px;">
+                </button>
+            </div>
+            <div class="islanav">
+                <div></div>
+                <div class="dropdown">
+                    <a href="/" class="nav-link">Home</a>
+                    <div class="dropdown-content">
+                        <a href="/#editoriale" class="dropdown-item">La memoria del visibile: segno, colore, ritmo e calligrafie</a>
+                        <a href="/#magazine" class="dropdown-item">Il magazine</a>
+                        <a href="/#crediti" class="dropdown-item">Crediti e informazioni</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="/pagine/biografia.html" class="nav-link">Biografia</a>
+                    <div class="dropdown-content">
+                        <a href="/pagine/biografia.html#note-curatori" class="dropdown-item">Note dei curatori</a>
+                        <a href="/pagine/biografia.html#linea-tempo" class="dropdown-item">Linea del tempo</a>
+                        <a href="/pagine/biografia.html#liberta-londinese" class="dropdown-item">La libertà londinese. L'asse Milano-Londra come paradigma di modernità.</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="/pagine/grafica.html" class="nav-link">Grafica</a>
+                    <div class="dropdown-content">
+                        <a href="/pagine/grafica.html#graphic-designer" class="dropdown-item">Simonetta Ferrante graphic designer: costruzione compositiva, creatività e fantasia</a>
+                        <a href="/pagine/grafica.html#progetto-corrispondenza" class="dropdown-item">Il progetto della corrispondenza</a>
+                    </div>
+                </div>
+                <a href="/pagine/pittura.html" class="nav-link">Pittura</a>
+                <div class="dropdown">
+                    <a href="/pagine/calligrafia.html" class="nav-link">Calligrafia</a>
+                    <div class="dropdown-content">
+                        <a href="/pagine/calligrafia.html#scrittura-astratta" class="dropdown-item">La scrittura astratta di Simonetta Ferrante</a>
+                        <a href="/pagine/calligrafia.html#paesaggio-frammenti" class="dropdown-item">Un paesaggio di frammenti calligrafici</a>
+                        <a href="/pagine/calligrafia.html#paesaggi-calligrafici" class="dropdown-item">Paesaggi calligrafici. Una delicata danza di lettere</a>
+                    </div>
+                </div>
+                <a href="/pagine/intervista.html" class="nav-link">Intervista</a>
+         <div></div>
+            </div>
+        </div>
+        <div class="container_carousel" style="margin-top: 120px;">
+            <section class="carousel">
+                <p id="carousel-counter" class="carousel-counter">1 / 4</p>
+                <div class="control left-control">
+                    <button id="prev-btn" onclick="scrollToItem(currentItem - 1);">
+                        <!-- Ho incollato un'immagine svg come icona previous -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                          <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/>
+                        </svg>
+                      </button>
+                </div>
+                <div class="control right-control">
+                    <button id="next-btn" onclick="scrollToItem(currentItem + 1);">
+                        <!-- Ho incollato un'immagine svg come icona next -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="bullet-container" class="bullet-container">
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                </div>
+                <ul id="carousel-list" class="carousel-list">
+                    <li class="carousel-item">
+                        <img src="../img/home/simonetta.jpg"/>
+                        <div class="carousel-caption">Simonetta Ferrante, ritratto fotografico</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/biografia/il vento dell'estremo oriente 2007.jpeg"/>
+                        <div class="carousel-caption">Il vento dell'Estremo Oriente (2007)<br>Chiasso, m.a.x. museo, Archivio Simonetta Ferrante</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/biografia/simonetta ferrante con l'architetto Gio Ponti 1960.jpeg"/>
+                        <div class="carousel-caption">Simonetta Ferrante con l'architetto Gio Ponti in visita a Tebe (1960)</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/biografia/Cecil Collins.jpeg"/>
+                        <div class="carousel-caption">Cecil Collins, docente presso la Central School of Arts and Crafts (London, 1958)</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/biografia/Simonetta Ferrante a lezione da Cecil Collins .jpeg"/>
+                        <div class="carousel-caption">Simonetta Ferrante (al centro) con, a destra, Cecil Collins,<br>suo docente presso la Central School of Arts and Crafts</br></div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/biografia/(2001) Mar Absoluto (2).jpeg"/>
+                        <div class="carousel-caption">Mar Absoluto (2001)<br>Chiasso, m.a.x. museo, Archivio Simonetta Ferrante</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/biografia/life drawing 1986.jpeg"/>
+                        <div class="carousel-caption">Life drawing (1986)<br>Chiasso, m.a.x. museo, Archivio Simonetta Ferrante</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/biografia/è la mente che traccia la strada 2011.jpeg"/>
+                        <div class="carousel-caption">È la mente che traccia la strada (2011)<br>Chiasso, m.a.x. museo, Archivio Simonetta Ferrante</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/biografia/layout scolastico su cartone 1958.jpeg"/>
+                        <div class="carousel-caption">Layout scolastico su cartone (1958)<br>Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/biografia/senza titolo 1990.jpeg"/>
+                        <div class="carousel-caption">Senza titolo (1990)<br>Chiasso, m.a.x. museo, Archivio Simonetta Ferrante</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/biografia/Battle of word 2009.jpeg"/>
+                        <div class="carousel-caption">Battle of word (2009)<br>Chiasso, m.a.x. museo, Archivio Simonetta Ferrante</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/biografia/layout scolastico su cartone 1958_2.jpeg"/>
+                        <div class="carousel-caption">Layout scolastico su cartone (1958)<br>Centro di Documentazione sul Progetto Grafico di AIAP (AIAP CDPG)</div>
+                    </li>
+                    <li class="carousel-item">
+                        <img src="../img/biografia/tra due mondi 1990.jpeg"/>
+                        <div class="carousel-caption">Tra due mondi (1990)<br>Chiasso, m.a.x. museo, Archivio Simonetta Ferrante</div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="container">
+            <div class="container_capitolo">
+               <div class="sottotitolo" id="note-curatori">
+               <h2>Note dei curatori</h2>
+                  <h3>a cura di Nicoletta Ossanna Cavadini e Claudio Cerritelli</h3>
+                </div>        
+                    <p>La mostra, che s'inserisce nel filone della <i>"Grafica contemporanea"</i>, è dedicata quest'anno a Simonetta Ferrante (1930), attiva nell'arco di un vasto periodo professionale, che ha saputo distinguersi per un particolare percorso costantemente volto alla ricerca della memoria del visibile.
+                        La sua attività inizia con la formazione da graphic design, per poi indirizzarsi prevalentemente verso l'incisione, la pittura, il collage, i libri d'artista e quindi l'arte calligrafica. Tali ambiti disciplinari sono complementari e da intendersi quali fasi di un'unica poetica artistica diretta allo studio del segno, del colore, del ritmo e della scrittura.
+                        Simonetta Ferrante nasce a Milano in una famiglia abbiente appassionata all'arte e alla grafica d'impresa. Il nonno Attilio Calabi, infatti, a cui lei è molto affezionata, è stato il primo direttore generale de la Rinascente. Dopo gli studi liceali si diploma in pianoforte al conservatorio Giuseppe Verdi di Milano e coltiva nel contempo passioni artistiche e musicali.
+                        Nei primi anni Cinquanta inizia il suo approccio al graphic design presso lo studio di Max Huber, creatore del logotipo de la Rinascente, e anche presso lo studio dell'architetto Pier Giacomo Castiglioni. Sarà Giovanni Pintori, che in quegli anni lavorava per Olivetti, a consigliarle di completare gli studi a Londra, presso la Central School of Arts and Crafts 
+                        (Scuola Centrale di Arti Applicate), dove nel 1958 otterrà il diploma di Graphic Design, Pittura e Disegno con il pittore Cecil Collins. Rientrata a Milano alla fine degli anni Cinquanta, conoscerà Serge Libiszewski, Lora Lamm e i principali esponenti del circolo internazionale di grafici, designer e fotografi presenti nella metropoli lombarda. All'inizio degli anni 
+                        Sessanta lavora dapprima con Bob Noorda, quindi con Bruno Munari alla Bompiani, assistendolo nell'impaginazione di libri. La formazione ricevuta in Inghilterra le permette di distinguersi per la grande varietà e per l'uso dei caratteri tipografici, raggiungendo una forte comunicativa senza stereotipi culturali, senza retorica e contraddistinguendosi per semplicità 
+                        e spontaneità. In seguito, apre uno studio in collaborazione con la grafica svizzera Giovanna Graf e poi con Carlo Pollastrini. A partire dal 1971 - e per circa quindici anni - si dedica intensamente all'attività professionale. È questo il periodo in cui Simonetta Ferrante elabora un'immagine coordinata che va dallo studio di marchi d'impresa alla modulistica, alla 
+                        comunicazione pubblicitaria. I suoi committenti sono, per citarne solo alcuni, i Supermercati Esselunga, Galgano, Fotorex, 3M - Minnesota, Elettrocarbonium, Rizzoli, Data Control. 
+                        Nel 1975 ritorna in Inghilterra intenzionata a svolgere degli approfondimenti con artisti quali Dennis Creffield, John Epstein e Bert Isaac. Si dedica quindi appieno alla grafica artistica e nascono così le sue produzioni più singolari: le incisioni, gli acquerelli, i collage, i monotipi e a seguire i libri d'artista. All'inizio degli anni Novanta si dedica allo studio 
+                        della calligrafia e a installazioni di carta e di tessuto. Avvicinandosi alla conoscenza delle scienze orientali, approfondisce diverse sperimentazioni, ma sempre nel solco della contemporaneità. La mostra al m.a.x. museo, partendo dagli anni della formazione, presenta questo suo percorso artistico, esponendo incisioni con le sue matrici, gli acquerelli, i monotipi, 
+                        i diversi collage, i singolari studi di calligrafie e inchiostri, pitture con tecniche e materiali diversi sempre nel segno dell'astrazione, nonché libri d'artista.
+                        La produzione da graphic designer, con l'ideazione dei vari logo e marchi d'impresa, la realizzazione di diverse pubblicità, manifesti, copertine e packaging, è trattata in una specifica sezione che mette anche in luce le relazioni con Max Huber e con la grafica svizzera Giovanna Graf, con la quale Simonetta Ferrante ha condiviso lo studio professionale all'inizio 
+                        degli anni Sessanta. 
+                        <br>La mostra, che con il suo catalogo viene a colmare un vuoto bibliografico, è realizzata grazie al prestito dell'archivio dell'artista recentemente donato al museo, a quello di collezionisti privati e dell'AIAP, Associazione italiana design della comunicazione visiva, con i suoi materiali custoditi presso il Centro di Documentazione sul Progetto Grafico di Milano.</br>                        
+                    </p> 
+                </div> 
+            <div class="container_date">
+                <div class="sottotitolo">
+                <h2 id="linea-tempo">Linea del tempo</h2>
+                <h3>a cura di Matilde Tettamanti</h3>
+                </div>
+                <div>
+                    <h4>1930</h4>
+                    <p>Simonetta Ferrante nasce il 15 novembre a Milano, primogenita di Gabriella Calabi e Renzo Ferrante. Ha due fratelli e una sorella. Il padre svolge la professione di dirigente d'azienda. 
+                    </p>
+                </div>
+                <div>
+                    <h4>1936</h4>
+                    <p>Frequenta le scuole elementari a Milano.</p>
+                </div>
+                <div>
+                    <h4>1940</h4>
+                    <p>Si trasferisce con tutta la famiglia a Firenze, dove il padre dirige l'ufficio della ditta San Giorgio. I tempi di guerra molto difficili costringono la famiglia Ferrante a rimanere a Firenze per due anni.</p>
+                </div>
+                <div>
+                    <h4>1942</h4>
+                    <p>La famiglia Ferrante ritorna ad abitare a Milano per un breve periodo e, a seguito dei bombardamenti, sfolla a Vacciago d'Ameno, sul lago d'Orta, nella casa del nonno Attilio Calabi. La sua predisposizione verso le materie artistiche spinge Simonetta a frequentare l'atelier di Antonio Calderara, artista di fama e amico della sua famiglia, di cui il nonno era collezionista. Da Calderara riceverà le prime lezioni di pittura.</p>
+                </div>
+                <div>
+                    <h4>1945</h4>
+                    <p>Si trasferisce in Brianza, dove frequenta, a Merate, la terza media e il primo anno di liceo scientifico, perché in tempo di guerra non poteva scegliere altro percorso di scuola superiore. Nel frattempo, continua a ricevere lezioni private di disegno.</p>
+                </div>
+                <div>
+                    <h4>1948</h4>
+                    <p>Rientrata a Milano alla fine della guerra può finalmente iscriversi al liceo artistico presso le Orsoline. L'insegnamento non è particolarmente creativo come Simonetta Ferrante desidererebbe, ma superati gli esami ottiene la maturità nel 1948.</p>
+                </div>
+                <div>
+                    <h4>1952-1954</h4>
+                    <p>Frequenta lo studio dell'architetto Pier Giacomo Castiglioni, che insegnava anche al Politecnico di Milano. Simonetta segue in particolar modo la realizzazione di allestimenti per la Fiera di Milano del 1952, 1953 e 1954, il padiglione Rai e Montecatini.</p>
+                </div>
+                <div>
+                    <h4>1953</h4>
+                    <p>Consegue il diploma di pianoforte presso il conservatorio Giuseppe Verdi di Milano. </p>
+                </div>
+                <div>
+                    <h4>1953-1954</h4>
+                    <p>Presentata dall'architetto Pier Giacomo Castiglioni al grafico svizzero Max Huber, lavora presso il suo studio di Milano effettuando realizzazioni pubblicitarie quali impaginazioni, cartelli, esposizioni.</p>
+                </div>
+                <div>
+                    <h4>1956-1958</h4>
+                    <p>A seguito del suggerimento di Giovanni Pintori, celebre graphic designer dell'Olivettil, Simonetta Ferrante presenta il portfolio per entrare alla Central School of Arts and Crafts di Londra e viene accettata. Nel gennaio 1957 inizia a frequentare i corsi di design pubblicitario, tipografia, fotografia, ottenendo il diploma nel 1958. <br>Negli stessi anni frequenta i corsi serali di pittura e disegno organizzati da Cecil Collins, artista molto noto e figura carismatica nella formazione artistica della giovane Simonetta. Collins l'avvicinerà alla pratica meditativa da lei sviluppata nel corso degli anni successivi.</br></p>
+                </div>
+                <div>
+                    <h4>1959</h4>
+                    <p>Rientra a Milano e frequenta il circolo internazionale di artisti, grafici e fotografi che avevano fatto della capitale lombarda un crocevia di relazioni. Fra i molti ricordiamo lo svizzero Serge Libiszewski (a Milano chiamato Sergio Libis) e il tedesco Richard Sapper. Altro incontro importante da registrare in quegli anni è quello con Felice Casorati, amico dei nonni Ferrante, che la motiva a proseguire la strada dell'arte presentandola a Primo Conti, artista fiorentino grazie al quale partecipa alla prima mostra della sua carriera artistica alla Galleria Numero di Firenze. Presenta il suo curriculum a vari studi grafici, tra cui quello di Bob Noorda in Foro Bonaparte 48 a Milano, di cui diventa per un anno la prima assistente. Collabora con Noorda alla realizzazione di materiale pubblicitario per marchi importanti come Pirelli, Montecatini e Farmitalia.</p>
+                </div>
+                <div>
+                    <h4>1960</h4>
+                    <p>Dopo un breve periodo da freelance e una successiva fase svolta presso la casa editrice Garzanti, dove segue l'impaginazione di dizionari illustrati, inizia a lavorare presso Bompiani come assistente di Bruno Munari. Fondamentali risultano la conoscenza e la collaborazione creativa con il maestro. Espone alla mostra YAIA Young Artists in Advertising e per questo è segnalata nella rivista "Due Dimensioni" nel 1964.</p>
+                </div>
+                <div>
+                    <h4>1961</h4>
+                    <p>Si mette in proprio e avvia uno studio grafico a Milano in via Turati in collaborazione con l'illustratrice svizzera Giovanna Graf, con la quale mantiene rapporti di stretta amicizia fino alla sua scomparsa.</p>
+                </div>
+                <div>
+                    <h4>1962-1970</h4>
+                    <p>Su segnalazione di Max Huber collabora con l'ufficio pubblicitario di Birra Poretti e come freelance per SNIA Viscosa, 3M - Minnesota, Reader's Digest, IGAP, Vanossi S.p.A., e per vari marchi, fra cui Alberto Galgano Associati, EPT Milano e i Supermercati Esselunga, di cui realizza vari manifesti e diverse pagine pubblicitarie pubblicate su quotidiani. Nel 1970 conosce il suo futuro marito, che sposerà dopo ventitré anni di convivenza.</p>
+                </div>
+                <div>
+                    <h4>1971-1985</h4>
+                    <p>Giovanna Graf si sposa trasferendosi Panarea; Simonetta Ferrante si associa con Carlo Pollastrini fondando lo Studio Barra 6. In questi anni sono particolarmente importanti i lavori eseguiti per Esselunga, Fotorex, Galgano, Elettrocarbonium, Rizzoli, Data Control e Associazioni di psicoterapia.<br>Nel 1975 diventa membro di AIAP (Associazione italiana design della comunicazione visiva) e in seguito fa parte del consiglio direttivo con lo specifico incarico di curare i rapporti con organizzazioni internazionali. Con l'inizio degli anni Ottanta riprende attivamente l'interesse verso l'espressione artistica e inizia a frequentare, come aveva fatto in gioventù, corsi in Inghilterra tenuti da artisti britannici del calibro di Dennis Creffield, John Epstein, Bert Isaac.</br></p>
+                </div>
+                <div>
+                    <h4>1988</h4>
+                    <p>Tiene una mostra personale presso la Non Libreria a Milano, con presentazione Elena Pontiggia.</p>
+                </div>
+                <div>
+                    <h4>1990-1994</h4>
+                    <p>Intraprende l'iniziativa di tenere a Milano corsi per adulti di educazione artistica. L'attività, dapprima sporadica, diviene ben presto continuativa seguendo la formula di una scuola d'interesse artistico denominata Centro dell'Immagine e dell'Espressione. Tale scuola si avvale del contributo di varie personalità italiane e inglesi del mondo dell'arte. Oltre ai corsi più specificamente artistici, la scuola propone corsi di tessitura, fotografia, musica e calligrafia. In questo periodo Simonetta si avvicina al mondo della calligrafia e, chiuso il Centro nel 1994, comincia a frequentare l'Associazione Calligrafica Italiana (ACI) e i suoi corsi, introducendo la calligrafia come metodo espressivo e artistico.</p>
+                </div>
+                <div>
+                    <h4>1993</h4>
+                    <p>Il 5 maggio sposa l'ingegner Giuseppe Moretti, ufficiale di marina.</p>
+                </div>
+                <div>
+                    <h4>1995-1996</h4>
+                    <p>Si tiene presso l'AIAP una mostra collettiva cui partecipa Simonetta Ferrante, seguita da un'esposizione presso il Circolo Culturale Bertolt Brecht, quindi presso il Palazzo delle Stelline e sempre a Milano presso la Galleria Avida Dollars. <br>In questi anni conosce Giorgio Upiglio e frequenta la sua stamperia di Milano. Con lui instaura un importante rapporto di collaborazione che la arricchisce sul piano professionale della ricerca artistica; conosce e pratica la tecnica dell'incisione, che diventa un modo espressivo per lei fra i più congeniali. Nell'atelier-cenacolo del famoso stampatore incontra molti esponenti del mondo dell'arte, italiana e straniera, occasioni di interessanti scambi culturali. Nel frattempo, la calligrafia diventa un elemento basilare del suo lavoro. Gli studi formali in questo campo e i rapporti e i frequenti scambi - con noti esponenti dell'arte calligrafica internazionale, fra i quali Brody Neuenschwander, Thomas Ingmire, Hans-Joachim Burgert, confermano il suo nuovo percorso, nel quale la calligrafia è essenziale cifra artistica.</br></p>
+                </div>
+                <div>
+                    <h4>1997-1999</h4>
+                    <p>Presso l'Istituto Italiano di Cultura di Città del Messico tiene un'esposizione persona cui seguono una collettiva a Castellanza presso Villa Pomini in omaggio ad Alda Merini, quindi alla Galleria le Vieux Bourg di Lonay, vicino a Losanna, un'esposizione con un ceramista e una pittrice. Segue presso la Biblioteca Trivulziana di Milano l'esposizione collettiva di Libri d'artista per Alda Merini, mentre nella personale tenutasi nel 1999 presso la Galleria d'Arte Derbylius di Milano presenta le sue prime incisioni.</p>
+                </div>
+                <div>
+                    <h4>2000-2003</h4>
+                    <p>Si tiene una sua esposizione personale presso l'Istituto Brasile-Italia a Milano intitolata Mar Absoluto. Incisioni e tecniche miste, con presentazione di Valentina Cisventi, segue quindi una collettiva a Eastleigh presso la Beatrice Royal Gallery. Nel 2001 tiene a Milano un'esposizione collettiva presso la Permanente, quindi a Roma una personale presso la Galleria Candido Portinari, cui segue l'esposizione personale presentata dalla stessa Cisventi a Como presso la Galleria Salotto intitolata Dal segno alla parola.</p>
+                </div>
+                <div>
+                    <h4>2004-2008</h4>
+                    <p>Nel 2004 tiene una mostra collettiva a Mendrisio presso il Museo d'arte dall'eloquente titolo Scrivere, a seguire presso lo Studio d'Arte Grafica di Milano espone in una personale incisioni e monotipi. L'anno successivo espone in una collettiva a Hampshire in Inghilterra presso Open Studios, quindi sempre nello stesso anno presso La Permanente di Milano, e ancora in Cantone Ticino a Mendrisio, dove espone nella mostra Incidere ad arte stampe effettuate nell'atelier di Giorgio Upiglio. Nel 2006 si tiene a Lugano l'esposizione collettiva Archivio Donne Ticino cui partecipa; segue nello stesso anno una sua esposizione collettiva a Bruges presso il Manna Art Center. In rapida successione si tiene nelle sedi di Firenze, Milano e Venezia la mostra collettiva itinerante per il Premio Mostra Leonardo. A Chiasso nel 2007 si tiene una sua personale presso la Galleria Mosaico intitolata Tecniche miste... senza regole. Fanno seguito nello stesso anno diverse collettive a Garbagnate Milanese, Oltre le parole, presso la Galleria Corte Valenti; a Piacenza presenta presso Solaria Arte la mostra Carte colorate; a Roma presso l'Istituto Nazionale per la Grafica viene trasferita l'esposizione collettiva tenutasi precedentemente a Mendrisio nel 2005 dal titolo Incidere ad arte. Nel 2008 Ferrante espone alla Permanente nella mostra dal titolo ironico Permanente... impermanenza, con Silvia Manazza. Quindi segue una stagione importante che la vede a Mosca presso il Contemporary Museum of Calligraphy nell'esposizione collettiva Mistery of the World Calligraphy.</p>
+                </div>
+                <div>
+                    <h4>2009-2012</h4>
+                    <p>Nel 2009 partecipa alla collettiva tenutasi a Milano presso SBLU_Spazioalbello dal titolo Territori dell'anima; quindi, è al Palazzo delle Stelline per la collettiva Lapis Ludica, poi a Foggia presso la Fondazione Banca del Monte per la collettiva. Tra carte, e a Grave-dona, presso lo spazio espositivo della Comunità Alto Lario Occidentale, con la mostra collettiva. Tra astratto e informale. Nel 2010 ritorna a Mosca presso il Contemporary Museum of Calligraphy dove si tiene la seconda edizione dell'International Exhibition of Calligraphy; segue a Calolziocorte, vicino a Lecco, una mostra collettiva in Santa Maria del Lavello, intitolata Tra astratto e informale, quindi a Milano una collettiva presso la Permanente e a Siniscalco Arte una personale intitolata Tra Segno e Sogno. Nel 2011 a Milano si tiene una sua importante mostra personale presso la Galleria AIAP intitolata Il segno continuo, segue presso la Galleria SBLU l'esposizione collettiva dedicata a // libro d'Artista; quindi, allo Spazio Oberdan la collettiva Quando la parola diventa immagi-ne. Sempre nello stesso anno si tiene nello spazio espositivo dell'Università Bocconi una sua personale curata da Elena Pontiggia, cui segue una mostra di calligrafia per i venti anni dell'ACI presso la Galleria AIAP a Milano. Partecipa, in occasione della terza Biennale d'arte di Lodi, all'esposizione collettiva tenuta presso lo Spazio Bipielle Arte.</p>
+                </div>
+                <div>
+                    <h4>2012-2014</h4>
+                    <p>Nel 2012 partecipa alla mostra intitolata Painting words nell'Officina Coviello a Milano, cui segue a Viareggio l'esposizione intitolata Electro BAU presso BAU Nove, quindi a Berlino l'esposizione personale Segni oltre confine presso AquabitArt. L'anno successivo partecipa a una mostra collettiva tenutasi a Milano presso la Galleria delle Lavagne dal titolo Linguaggi dell'arte, cui seguono Le stanze di GEA presso Quinto Cortile e, sempre nella capitale lombarda, l'esposizione collettiva Alchimia del pane presso Spazio Orso 16. <br>Nel 2014 si tiene a Modena, presso il Laboratorio d'arte grafica, l'esposizione collettiva Arte su carte. L'Arte di fare Libri 3. Giorgio Upiglio, quindi a Chiasso, presso la Galleria Mosaico, viene promossa l'esposizione collettiva Racconti per immagini e a Milano, alla Permanente, viene presentata sempre una collettiva, e ancora, presso la Galleria l'Originale, Libri d'Artista per l'esposizione di piccoli editori.</br></p>
+                </div>
+                <div>
+                    <h4>2015</h4>
+                    <p>Tiene al Design Studio Whirpool di Delhi un workshop di collage per creativi dello studio, quindi partecipa a Vilnius, in Lituania, alla VII International Artist's Book Triennal in collaborazione con Brody Neuenschwander; durante l'estate tiene la mostra personale Segni con le ali presso la Fondazione Calderara sul lago d'Orta e a Milano, in autunno, presso la Galleria Derbilius, la mostra collettiva Leggere Non Leggere. Sue opere sono presenti in collezioni private, nell'Archivio di Calligrafia di Berlino, nella Civica Raccolta delle Stampe "Achille Bertarelli", presso il Castello Sforzesco di Milano, al Contemporary Museum of Calligraphy di Mosca e presso la collezione d'arte e grafica del m.a.x. museo di Chiasso.</p>
+                </div>
+            </div>     
+            <div class="container_capitolo"> 
+               <div class="sottotitolo" id="liberta-londinese">
+               <h2>La libertà londinese.<br>L'asse Milano-Londra come</br>paradigma di modernità</h2>
+                  <h3>a cura di Marco Sammicheli</h3>
+                </div>        
+                    <p>Nella vicenda umana e professionale di Simonetta Ferrante le città di Milano e Londra rivestono un ruolo che in questa riflessione vorrei elevare a dato culturale, metodologico e infine ideale, perché capace di generare un grado crescente di autonomia, sia di pensiero sia di azione, lungo tutta la sua carriera. Questo punto di vista vuole scongiurare la dittatura dell'aneddoto e soprattutto sottolineare la specialità di un percorso che nasce come personale e si trasforma in autoriale. 
+                        Ferrante proviene da una famiglia di agiata borghesia ambrosiana, ben inserita nelle dinamiche industriali e creative della Milano del secondo dopoguerra. La lista delle personalità che visita, che ascolta, che consulta, che assiste, con cui instaura un rapporto di scambio intellettuale e compositivo è di altissimo livello. Tra il 1942 e il 1970 Ferrante si relaziona nell'ordine con designer e artisti di grande calibro - e occorre fare l'elenco perché nella trappola dell'allieva prediletta, della discepola solerte che poi arriva a scalare la gerarchia dello studio, non cadrà mai. Tra loro Pier Giacomo Castiglioni, Max Huber, Sergio Libis, Richard Sapper, Bob Noorda, Bruno Munari, Giovanna Graf e Lora Lamm; e poi Antonio Calderara, Primo Conti e Felice Casorati. Appunto non sarà mai delfino di nessuno, proprio per quell'energia mai sopita di ascoltare sé stessa, di smentire un sentiero immaginato dalla famiglia di provenienza, di provare strade coerenti con un percorso in cui non si confondono il piano umano e quello professionale, ma si compenetrano perché fondamentalmente inscindibili. 
+                        C'è però una figura, tra l'altro vicina alla famiglia di Ferrante, che innesca quasi subito e favorisce la sua attitudine inquieta e inconsueta, favorendola: è Giovanni Pintori che accende. È Giovanni Pintori ad accendere in Simonetta il desiderio al viaggio, alla scoperta di un orizzonte ancor più stimolante del già fervido settentrione italiano del boom economico. Sarà appunto la Londra pre-anni Sessanta. Pintori, che aveva incontrato in Olivetti nella metà degli anni Cinquanta, le suggerisce con successo di presentare un portfolio all'esame di ammissione della Central School of Arts and Crafts, oggi nota come Central Saint Martins. Frequenta i corsi di design pubblicitario, tipografia, fotografia, e anche i corsi serali di pittura e disegno organizzati da Cecil Collins, artista carismatico nella formazione artistica della giovane Ferrante. Collins l'avvicinerà pure alla pratica meditativa, aspetto che lei svilupperà nel corso degli anni successivi. 
+                        La sana inquietudine, che molto assomiglia a quella di tante giovani designer che oggi lasciano Venezia, Milano, Treviso o Urbino per diplomarsi in una scuola londinese, nel 1958 era da considerarsi non solo un primato, prima ancora che un colpo di testa non così tollerabile per una ragazza di buona famiglia, ma senza dubbio un segnale di necessaria autonomia e libertà espressiva. Oggi questo è diventato una consuetudine sclerotizzata dal dovere. Tant'è che ha perso molto fascino e utilità. Il pellegrinaggio laico verso Londra e stato costante, ha alimentato il suo immaginario quando creava grafica, pubblicità ed 
+                        editoria negli studi milanesi dove al tempo lavorava. 
+                        Il profilo internazionale e i continui viaggi fanno sì che Londra, questa volta negli anni Ottanta, torni prepotentemente nella vita di Ferrante. Il fuoco sacro dell'arte prende il sopravvento sull'arte applicata della grafica che lei abbandona gradualmente. Il bagaglio multidisciplinare non è più uno strumento di lavoro, ma una storia a cui aggiungere un nuovo capitolo, ancora una volta all'insegna della libertà e dell'autonomia linguistica. Seguendo i corsi di Dennis Creffield, John Epstein e Bert Isaac, abbraccia la pittura. 
+                        Eppure, non è nemmeno questo l'approdo di Simonetta Ferrante. Già dieci anni più tardi sarà la calligrafia a diventare il codice espressivo basilare del suo lavoro. Torna a studiare e a cercare tanto nel prossimo quanto nel lontano stimoli e personalità che sarà lei a portare nel suo linguaggio e nella sua Milano. Tra questi ci sono stati Brody Neuenschwander, Thomas Ingmire e Hans-Joachim Burger, incontrati a Milano tramite l'ACI (Associazione Calligrafica Italiana). Frequentandoli Ferrante ha consolidato la calligrafia come cifra stilistica personale, tanto da riportarla a esporre in Inghilterra, in Russia, in India, in Svizzera.                        
+                    </p> 
+                </div>      
+        </div>
+    </div>
+
+    <footer class="footer">
+        <a href="#" class="back-to-top">Torna su</a>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
