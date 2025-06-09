@@ -117,18 +117,16 @@ p {
 .nav-link {
     color: #c2d0d4;
     background-color: #374650;
-    background-color: none;
-    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Satoshi-Light', sans-serif;
     font-size: 1.2rem;
     padding: 12px 6px;
     border-radius: 30px;
     transition: background-color 0.3s ease-in-out;
     min-width: 50px;
-    border:none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border: none;
 }
 
 .nav-link:hover {

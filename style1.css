@@ -119,6 +119,9 @@ p {
     color: #374650;
     background-color: #c2d0d4;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Satoshi-Light', sans-serif;
     font-size: 1.2rem;
     padding: 12px 6px;
