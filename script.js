@@ -202,7 +202,7 @@ function changeMode() {
     
     // Determino il percorso base per le immagini in base alla pagina corrente
     const isInPagineFolder = window.location.pathname.includes('/simonetta-ferrante/pagine/');
-    const base_svg_path = isInPagineFolder ? "../img/home/" : "img/home/";
+    const base_svg_path = isInPagineFolder ? "/simonetta-ferrante/img/home/" : "/simonetta-ferrante/img/home/";
     
     // Trovo il bottone dark mode e la sua immagine
     const darkModeButton = document.querySelector('.nav-link[onclick="changeMode()"]');
