@@ -129,6 +129,7 @@ p {
     transition: background-color 0.3s ease-in-out;
     min-width: 50px;
     border: none;
+    height: 100%;
 }
 
 .nav-link:hover {
@@ -151,7 +152,7 @@ p {
 
 .dark-mode-container .nav-link {
     background-color: #c2d0d4;
-    height: 50px;
+    height: 80px;
     padding: 0 18px;
     border-radius: 30px;
     display: flex;
@@ -168,6 +169,11 @@ p {
 .dark-mode-container .nav-link:hover {
     color: #c2d0d4;
     background-color: #374650;
+    height: 80px;
+    border-radius: 30px;
+    align-items: center;
+    border: 2px solid #87CEEB;
+    margin-top: 15px;
     transition: background-color 0.3s ease-in-out;
 }
 

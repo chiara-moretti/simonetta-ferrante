@@ -126,7 +126,9 @@ p {
     border-radius: 30px;
     transition: background-color 0.3s ease-in-out;
     min-width: 50px;
+    height: 100%;
     border: none;
+    height: fit-container;
 }
 
 .nav-link:hover {
@@ -145,6 +147,28 @@ p {
     display: flex;
     align-items: center;
     margin-right: 0px;
+}
+
+.dark-mode-container .nav-link {
+    height: 80px;
+    padding: 0 18px;
+    border-radius: 30px;
+    align-items: center;
+    border: 2px solid #87CEEB;
+    margin-top: 15px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dark-mode-container .nav-link:hover {
+    color: #c2d0d4;
+    background-color: #374650;
+    height: 80px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #87CEEB;
+    margin-top: 15px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .container_home {
