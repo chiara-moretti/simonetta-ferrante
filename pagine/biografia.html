@@ -8,6 +8,11 @@
     </head>
     <body class="body">
         <div class="navbar">
+            <button class="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="islanav">
                 <button class="nav-link"  onclick="changeMode()">
                     <img src="../img/home/mezzaluna1.svg" alt="Dark mode toggle" style="width: 20px; height: 20px;">
@@ -61,6 +66,17 @@
          <div></div>
             </div>
         </div>
+        
+        <!-- Menu Mobile -->
+        <div class="mobile-menu">
+            <a href="../index.html" class="nav-link">Home</a>
+            <a href="biografia.html" class="nav-link">Biografia</a>
+            <a href="grafica.html" class="nav-link">Grafica</a>
+            <a href="pittura.html" class="nav-link">Pittura</a>
+            <a href="calligrafia.html" class="nav-link">Calligrafia</a>
+            <a href="intervista.html" class="nav-link">Intervista</a>
+        </div>
+        
         <div class="container_carousel" style="margin-top: 120px;">
             <section class="carousel">
                 <p id="carousel-counter" class="carousel-counter">1 / 4</p>
