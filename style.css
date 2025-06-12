@@ -832,6 +832,58 @@ p {
     }
     
     .mobile-cover .carousel-caption {
-        display: none !important; /* Nasconde definitivamente la caption su mobile */
+        display: none !important; /* Nasconde SOLO la caption dell'immagine copertina su mobile */
+    }
+    
+    /* Ripristino le caption del carousel principale */
+    .carousel-caption {
+        z-index: 200;
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 auto;
+        width: max-content;
+        color: white;
+        font-size: 16px;
+        line-height: 25px;
+        text-align: center;
+        font-weight: bold;
+        padding: 1px 8px;
+        border-radius: 5px;
+        background-color: #374650;
+        font-family: 'Satoshi-Light', sans-serif;
+        font-size: 10pt;
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
+    }
+    
+    .carousel:hover .carousel-caption {
+        opacity: 60%;
+    }
+    
+    .carousel-counter {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: max-content;
+        color: white;
+        font-size: 16px;
+        line-height: 25px;
+        text-align: center;
+        font-weight: bold;
+        padding: 1px 8px;
+        border-radius: 5px;
+        background-color: #374650;
+        opacity: 0;
+        font-family: 'Satoshi-Light', sans-serif;
+        font-size: 10pt;
+        transition: opacity .2s linear;
+    }
+    
+    .carousel:hover .carousel-counter {
+        opacity: 60%;
     }
 }

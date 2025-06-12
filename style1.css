@@ -832,7 +832,7 @@ p {
 }
 
 .mobile-cover .carousel-caption {
-    display: none !important; /* Nasconde definitivamente la caption su mobile */
+    display: none !important; /* Nasconde SOLO la caption dell'immagine copertina su mobile */
 }
 
 /* Stili specifici per mobile per il PDF viewer */
