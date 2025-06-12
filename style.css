@@ -813,13 +813,22 @@ p {
     
     /* Mostra l'immagine copertina su mobile */
     .mobile-cover {
-        display: block;
-        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 6px;
+        gap: 0;
+        box-sizing: border-box;
     }
     
     .mobile-cover img {
         max-width: 300px;
+        width: 90%;
+        height: auto;
         border-radius: 8px;
+        margin: 0 auto;
     }
     
     .mobile-cover .carousel-caption {
@@ -831,5 +840,8 @@ p {
         position: static;
         transform: none;
         padding: 10px 0;
+        text-align: center;
+        gap: 0;
+        width: 100%;
     }
 }
