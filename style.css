@@ -832,11 +832,6 @@ p {
     }
     
     .mobile-cover .carousel-caption {
-        display: none; /* Nasconde la caption su mobile */
+        display: none !important; /* Nasconde definitivamente la caption su mobile */
     }
-}
-
-/* Nasconde completamente tutte le caption e i counter del carousel */
-.carousel-caption, .carousel-counter {
-    display: none !important;
 }

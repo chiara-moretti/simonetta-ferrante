@@ -832,7 +832,7 @@ p {
 }
 
 .mobile-cover .carousel-caption {
-    display: none; /* Nasconde la caption su mobile */
+    display: none !important; /* Nasconde definitivamente la caption su mobile */
 }
 
 /* Stili specifici per mobile per il PDF viewer */
@@ -866,22 +866,4 @@ p {
         border-radius: 8px;
         margin: 0 auto;
     }
-    
-    .mobile-cover .carousel-caption {
-        margin-top: 15px;
-        font-size: 12pt;
-        color: #c2d0d4;
-        background-color: transparent;
-        opacity: 1;
-        position: static;
-        transform: none;
-        padding: 10px 0;
-        text-align: center;
-        width: 100%;
-    }
-}
-
-/* Nasconde completamente tutte le caption e i counter del carousel */
-.carousel-caption, .carousel-counter {
-    display: none !important;
 }
