@@ -336,6 +336,8 @@ p {
     height: auto;
     max-height: 80vh;
     object-fit: contain;
+    display: block;
+    max-width: 100%;
 }
 
 .pdf-viewer {
@@ -607,6 +609,9 @@ p {
     
     .container_img1 img, .container_img2 img {
         max-width: 200px;
+        height: auto;
+        display: block;
+        max-width: 100%;
     }
     
     .footer-links {
@@ -785,3 +790,31 @@ p {
 }
 
 /* Responsive Design - Media Queries */
+
+/* Ottimizzazioni specifiche per le immagini del carousel su mobile */
+.carousel img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+    display: block;
+    max-width: 100%;
+}
+
+/* Ottimizzazioni per schermi molto piccoli */
+.carousel-counter {
+    font-size: 8pt;
+    top: 10px;
+}
+
+.carousel img {
+    max-height: 50vh; /* Ancora più piccolo su schermi molto piccoli */
+    object-fit: contain;
+}
+
+.container_img1 img, .container_img2 img {
+    max-width: 150px; /* Riduco ulteriormente su schermi molto piccoli */
+    height: auto;
+    display: block;
+    max-width: 100%;
+}

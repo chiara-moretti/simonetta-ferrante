@@ -331,6 +331,8 @@ p {
     height: auto;
     max-height: 80vh;
     object-fit: contain;
+    display: block;
+    max-width: 100%;
 }
 
 .pdf-viewer {
@@ -445,8 +447,10 @@ p {
 }
 
 .container_img1 img, .container_img2 img {
-    max-width: 300px;
+    max-width: 200px;
     height: auto;
+    display: block;
+    max-width: 100%;
 }
 
 /* Stile per il footer e il pulsante torna su */
