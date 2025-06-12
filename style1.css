@@ -341,7 +341,7 @@ p {
 }
 
 .pdf-viewer {
-    height: 75vh;
+    height: 60vh;
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
@@ -604,7 +604,9 @@ p {
     }
     
     .pdf-viewer {
-        height: 40vh;
+        height: 70vh;
+        border-radius: 8px;
+        overflow: auto;
     }
     
     .container_img1 img, .container_img2 img {

@@ -336,7 +336,7 @@ p {
 }
 
 .pdf-viewer {
-    height: 75vh; /* Altezza ottimizzata per schermi molto piccoli */
+    height: 60vh; /* Ridotta da 75vh a 60vh per desktop */
     width: 100%;
     border-radius: 10px;
     overflow: hidden; /* Per l'iframe */
@@ -717,7 +717,9 @@ p {
     }
     
     .pdf-viewer {
-        height: 40vh;
+        height: 70vh; /* Aumentata da 40vh a 70vh per permettere lo scrolling */
+        border-radius: 8px;
+        overflow: auto; /* Permette lo scrolling interno */
     }
     
     .container_img1 img, .container_img2 img {
