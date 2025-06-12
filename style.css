@@ -624,14 +624,16 @@ p {
 /* Mobile (max-width: 767px) */
 @media screen and (max-width: 767px) {
     .container_home, .container {
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 3%;
+        padding-right: 3%;
     }
     
     .container_carousel {
         width: 100%;
-        padding: 0 10px;
+        padding: 0;
+        margin: 0 auto;
         margin-top: 60px;
+        box-sizing: border-box;
     }
     
     h1 {
@@ -695,8 +697,8 @@ p {
 /* Small Mobile (max-width: 480px) */
 @media screen and (max-width: 480px) {
     .container_home, .container {
-        padding-left: 3%;
-        padding-right: 3%;
+        padding-left: 2%;
+        padding-right: 2%;
     }
     
     h1 {
