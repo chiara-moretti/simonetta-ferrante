@@ -567,6 +567,7 @@ p {
 }
 
 .mobile-menu .dropdown-content {
+    display: none; /* Nasconde i dropdown nel menu mobile */
     position: static;
     background-color: transparent;
     box-shadow: none;

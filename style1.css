@@ -731,6 +731,7 @@ p {
 }
 
 .mobile-menu .dropdown-content {
+    display: none;
     position: static;
     background-color: transparent;
     box-shadow: none;
