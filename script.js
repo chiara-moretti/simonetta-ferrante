@@ -247,10 +247,45 @@ function changeMode() {
     }
 }
 
-if (typeof PDFObject !== "magazine") { // Se la libreria PDFObject è presente
+if (typeof PDFObject !== "undefined") { // Se la libreria PDFObject è presente
     PDFObject.embed(
-      "magazine.pdf", // Percorso del PDF
-      "#pdf-viewer", // Selettore del contenitore
+      "la-memoria-del-visibile.pdf", // Percorso del PDF
+      ".pdf-viewer", // Selettore del contenitore (classe invece di ID)
       { width: "90vw", height: "70vh" } // Dimensioni del visualizzatore
     );
   }
+
+// Funzioni per il menu hamburger mobile
+function toggleMobileMenu() {
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+}
+
+function closeMobileMenu() {
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('active');
+}
+
+// Chiudi il menu quando si clicca su un link
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileLinks = document.querySelectorAll('.mobile-menu .nav-link, .mobile-menu .dropdown-item');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+    
+    // Chiudi il menu quando si clicca fuori
+    document.addEventListener('click', function(event) {
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+            closeMobileMenu();
+        }
+    });
+});

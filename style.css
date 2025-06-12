@@ -495,3 +495,245 @@ p {
     justify-content: center;
     padding: 0 55px; /* Allineato al padding della navbar */
 }
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+    z-index: 1002;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #374650;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(194, 208, 212, 0.95);
+    z-index: 1001;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+.mobile-menu .nav-link {
+    color: #374650;
+    background-color: transparent;
+    font-size: 1.5rem;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-menu .nav-link:hover {
+    background-color: #374650;
+    color: #c2d0d4;
+}
+
+.mobile-menu .dropdown {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.mobile-menu .dropdown-content {
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    margin-top: 10px;
+}
+
+.mobile-menu .dropdown-item {
+    color: #374650;
+    background-color: transparent;
+    padding: 8px 16px;
+    font-size: 1.2rem;
+}
+
+.mobile-menu .dropdown-item:hover {
+    background-color: #374650;
+    color: #c2d0d4;
+}
+
+/* Responsive Design - Media Queries */
+
+/* Tablet (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .container_home, .container {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    
+    .container_carousel {
+        width: calc(100% - 100px);
+        padding: 0 25px;
+    }
+    
+    h1 {
+        font-size: 50px;
+    }
+    
+    h2 {
+        font-size: 20pt;
+    }
+    
+    .islanav {
+        gap: 50px;
+    }
+    
+    .nav-link {
+        font-size: 1rem;
+        padding: 10px 4px;
+    }
+}
+
+/* Mobile (max-width: 767px) */
+@media screen and (max-width: 767px) {
+    .container_home, .container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .container_carousel {
+        width: 100%;
+        padding: 0 10px;
+        margin-top: 60px;
+    }
+    
+    h1 {
+        font-size: 35px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    
+    h2 {
+        font-size: 16pt;
+    }
+    
+    h3 {
+        font-size: 14pt;
+    }
+    
+    p {
+        font-size: 12pt;
+    }
+    
+    .navbar {
+        height: 60px;
+        padding-top: 5px;
+    }
+    
+    .islanav {
+        display: none; /* Nasconde la navbar normale */
+    }
+    
+    .hamburger {
+        display: flex; /* Mostra il menu hamburger */
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 1002;
+    }
+    
+    .dark-mode-container {
+        display: none; /* Nasconde il bottone dark mode su mobile */
+    }
+    
+    .pdf-viewer {
+        height: 40vh;
+    }
+    
+    .container_img1 img, .container_img2 img {
+        max-width: 200px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .back-to-top, .pdf-link {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .container_home, .container {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    h2 {
+        font-size: 14pt;
+    }
+    
+    h3 {
+        font-size: 12pt;
+    }
+    
+    p {
+        font-size: 11pt;
+    }
+    
+    .islanav {
+        gap: 15px;
+    }
+    
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 6px 2px;
+    }
+    
+    .container_img1 img, .container_img2 img {
+        max-width: 150px;
+    }
+    
+    .carousel-caption {
+        font-size: 8pt;
+        bottom: 20px;
+    }
+    
+    .carousel-counter {
+        font-size: 8pt;
+        top: 10px;
+    }
+}
