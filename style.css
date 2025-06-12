@@ -835,3 +835,8 @@ p {
         display: none; /* Nasconde la caption su mobile */
     }
 }
+
+/* Nasconde completamente tutte le caption e i counter del carousel */
+.carousel-caption, .carousel-counter {
+    display: none !important;
+}

@@ -880,3 +880,8 @@ p {
         width: 100%;
     }
 }
+
+/* Nasconde completamente tutte le caption e i counter del carousel */
+.carousel-caption, .carousel-counter {
+    display: none !important;
+}
