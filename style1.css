@@ -619,6 +619,22 @@ p {
         font-size: 12px;
         padding: 8px 15px;
     }
+    
+    .carousel-caption {
+        max-width: 85%;
+        width: auto;
+        padding: 6px 10px;
+        word-wrap: break-word;
+        white-space: normal;
+        font-size: 9pt;
+    }
+    
+    .carousel-counter {
+        max-width: 85%;
+        width: auto;
+        padding: 4px 8px;
+        font-size: 9pt;
+    }
 }
 
 /* Small Mobile (max-width: 480px) */
@@ -660,11 +676,21 @@ p {
     .carousel-caption {
         font-size: 8pt;
         bottom: 20px;
+        max-width: 90%;
+        width: auto;
+        padding: 4px 8px;
+        word-wrap: break-word;
+        white-space: normal;
     }
     
     .carousel-counter {
         font-size: 8pt;
         top: 10px;
+        max-width: 90%;
+        width: auto;
+        padding: 4px 8px;
+        word-wrap: break-word;
+        white-space: normal;
     }
     
     .pdf-viewer {

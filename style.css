@@ -307,19 +307,22 @@ p {
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: max-content;
+    max-width: 85%;
+    width: auto;
     color: white;
     font-size: 16px;
     line-height: 25px;
     text-align: center;
     font-weight: bold;
-    padding: 1px 8px;
+    padding: 4px 8px;
     border-radius: 5px;
     background-color: #374650;
     opacity: 0;
     font-family: 'Satoshi-Light', sans-serif;
-    font-size: 10pt;
+    font-size: 9pt;
     transition: opacity .2s linear;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
 .carousel:hover .carousel-counter {
@@ -729,6 +732,22 @@ p {
         font-size: 12px;
         padding: 8px 15px;
     }
+    
+    .carousel-caption {
+        max-width: 85%;
+        width: auto;
+        padding: 6px 10px;
+        word-wrap: break-word;
+        white-space: normal;
+        font-size: 9pt;
+    }
+    
+    .carousel-counter {
+        max-width: 85%;
+        width: auto;
+        padding: 4px 8px;
+        font-size: 9pt;
+    }
 }
 
 /* Small Mobile (max-width: 480px) */
@@ -770,6 +789,11 @@ p {
     .carousel-caption {
         font-size: 8pt;
         bottom: 20px;
+        max-width: 90%;
+        width: auto;
+        padding: 4px 8px;
+        word-wrap: break-word;
+        white-space: normal;
     }
     
     .carousel-counter {
@@ -843,19 +867,22 @@ p {
         left: 50%;
         transform: translateX(-50%);
         margin: 0 auto;
-        width: max-content;
+        max-width: 85%;
+        width: auto;
         color: white;
         font-size: 16px;
         line-height: 25px;
         text-align: center;
         font-weight: bold;
-        padding: 1px 8px;
+        padding: 6px 10px;
         border-radius: 5px;
         background-color: #374650;
         font-family: 'Satoshi-Light', sans-serif;
-        font-size: 10pt;
+        font-size: 9pt;
         opacity: 0;
         transition: opacity .2s ease-in-out;
+        word-wrap: break-word;
+        white-space: normal;
     }
     
     .carousel:hover .carousel-caption {
@@ -868,19 +895,22 @@ p {
         left: 0;
         right: 0;
         margin: 0 auto;
-        width: max-content;
+        max-width: 85%;
+        width: auto;
         color: white;
         font-size: 16px;
         line-height: 25px;
         text-align: center;
         font-weight: bold;
-        padding: 1px 8px;
+        padding: 4px 8px;
         border-radius: 5px;
         background-color: #374650;
         opacity: 0;
         font-family: 'Satoshi-Light', sans-serif;
-        font-size: 10pt;
+        font-size: 9pt;
         transition: opacity .2s linear;
+        word-wrap: break-word;
+        white-space: normal;
     }
     
     .carousel:hover .carousel-counter {
