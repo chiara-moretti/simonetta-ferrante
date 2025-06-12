@@ -832,16 +832,6 @@ p {
     }
     
     .mobile-cover .carousel-caption {
-        margin-top: 15px;
-        font-size: 12pt;
-        color: #374650;
-        background-color: transparent;
-        opacity: 1;
-        position: static;
-        transform: none;
-        padding: 10px 0;
-        text-align: center;
-        gap: 0;
-        width: 100%;
+        display: none; /* Nasconde la caption su mobile */
     }
 }

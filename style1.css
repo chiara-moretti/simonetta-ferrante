@@ -831,6 +831,10 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.mobile-cover .carousel-caption {
+    display: none; /* Nasconde la caption su mobile */
+}
+
 /* Stili specifici per mobile per il PDF viewer */
 @media screen and (max-width: 767px) {
     /* Nasconde il PDF viewer su mobile */
