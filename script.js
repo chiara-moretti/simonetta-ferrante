@@ -1,17 +1,20 @@
+// Elementi del carousel - seleziona gli elementi DOM necessari per il funzionamento del carosello
 const carouselList = document.getElementById('carousel-list');
 const carouselCounter = document.getElementById('carousel-counter');
 const bulletContainer = document.getElementById('bullet-container');
 const nItems = carouselList.querySelectorAll('.carousel-item').length;
 
-//
+// Elementi per il cambio tema (dark/light mode) - seleziona gli elementi che cambiano con il tema
 const styleTheme = document.getElementById('style-theme');
 const logoAiap = document.getElementById("logo-aiap")
 const logoDesignverso = document.getElementById("logo-designverso")
 const logoPoli = document.getElementById("logo-poli")
 
+// Variabile per tenere traccia dell'elemento corrente del carousel
 let currentItem = 0;
 
 // Funzione per aggiornare la visibilità delle didascalie
+// Mostra solo la didascalia dell'elemento corrente e nasconde le altre
 function updateCaptions() {
     const captions = carouselList.querySelectorAll('.carousel-caption');
     captions.forEach((caption, index) => {
@@ -23,6 +26,7 @@ function updateCaptions() {
     });
 }
 
+// Inizializzazione del carousel - aggiorna contatore, bullet points e didascalie all'avvio
 updateCounter();
 updateBullets();
 updateCaptions(); // Aggiungo la chiamata iniziale

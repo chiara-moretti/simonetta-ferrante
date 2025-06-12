@@ -117,6 +117,7 @@ p {
 .nav-link {
     color: #c2d0d4;
     background-color: #374650;
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
