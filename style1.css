@@ -630,7 +630,7 @@ p {
     }
     
     .carousel-counter {
-        max-width: 85%;
+        max-width: 15%;
         width: auto;
         padding: 4px 8px;
         font-size: 9pt;
@@ -686,7 +686,7 @@ p {
     .carousel-counter {
         font-size: 8pt;
         top: 10px;
-        max-width: 90%;
+        max-width: 20%;
         width: auto;
         padding: 4px 8px;
         word-wrap: break-word;
@@ -827,6 +827,11 @@ p {
 .carousel-counter {
     font-size: 8pt;
     top: 10px;
+    max-width: 20%;
+    width: auto;
+    padding: 4px 8px;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
 .carousel img {

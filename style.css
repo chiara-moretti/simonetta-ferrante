@@ -307,22 +307,19 @@ p {
     left: 0;
     right: 0;
     margin: 0 auto;
-    max-width: 85%;
-    width: auto;
+    width: max-content;
     color: white;
     font-size: 16px;
     line-height: 25px;
     text-align: center;
     font-weight: bold;
-    padding: 4px 8px;
+    padding: 1px 8px;
     border-radius: 5px;
     background-color: #374650;
     opacity: 0;
     font-family: 'Satoshi-Light', sans-serif;
-    font-size: 9pt;
+    font-size: 10pt;
     transition: opacity .2s linear;
-    word-wrap: break-word;
-    white-space: normal;
 }
 
 .carousel:hover .carousel-counter {
@@ -743,7 +740,7 @@ p {
     }
     
     .carousel-counter {
-        max-width: 85%;
+        max-width: 15%;
         width: auto;
         padding: 4px 8px;
         font-size: 9pt;
@@ -799,6 +796,11 @@ p {
     .carousel-counter {
         font-size: 8pt;
         top: 10px;
+        max-width: 20%;
+        width: auto;
+        padding: 4px 8px;
+        word-wrap: break-word;
+        white-space: normal;
     }
     
     .pdf-viewer {
@@ -895,18 +897,9 @@ p {
         left: 0;
         right: 0;
         margin: 0 auto;
-        max-width: 85%;
+        max-width: 15%;
         width: auto;
         color: white;
-        font-size: 16px;
-        line-height: 25px;
-        text-align: center;
-        font-weight: bold;
-        padding: 4px 8px;
-        border-radius: 5px;
-        background-color: #374650;
-        opacity: 0;
-        font-family: 'Satoshi-Light', sans-serif;
         font-size: 9pt;
         transition: opacity .2s linear;
         word-wrap: break-word;
