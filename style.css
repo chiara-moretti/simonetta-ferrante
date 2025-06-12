@@ -337,9 +337,8 @@ p {
     height: 75vh; /* Altezza ottimizzata per schermi molto piccoli */
     width: 100%;
     border-radius: 10px;
-    overflow-y: auto;
+    overflow: hidden; /* Per l'iframe */
     scroll-behavior: smooth;
-    object-fit: contain; /* Mantiene le proporzioni */
 }
 
 /* Rimuovo gli stili dei controlli e dei bullet che non servono più */
