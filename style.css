@@ -717,21 +717,25 @@ p {
     }
     
     .pdf-viewer {
-        height: 70vh;
+        height: 90vh; /* Altezza quasi a schermo intero per contenere una pagina */
         border-radius: 8px;
-        overflow: visible; /* Rimuove overflow hidden su mobile */
+        overflow: hidden; /* Nasconde lo scrolling interno */
         -webkit-overflow-scrolling: touch;
         position: relative;
         z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
-    /* Assicura che l'iframe interno possa scrollare */
+    /* Assicura che l'iframe interno mostri una pagina alla volta */
     .pdf-viewer iframe {
         width: 100%;
         height: 100%;
         border: none;
-        overflow: auto;
+        overflow: hidden; /* Nasconde lo scrolling interno dell'iframe */
         -webkit-overflow-scrolling: touch;
+        object-fit: contain;
     }
     
     .container_img1 img, .container_img2 img {
