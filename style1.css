@@ -344,8 +344,8 @@ p {
     height: 60vh;
     width: 100%;
     border-radius: 10px;
-    overflow: hidden;
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Rimuovo gli stili dei controlli e dei bullet che non servono più */
@@ -606,7 +606,18 @@ p {
     .pdf-viewer {
         height: 70vh;
         border-radius: 8px;
+        overflow: visible;
+        -webkit-overflow-scrolling: touch;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .pdf-viewer iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
         overflow: auto;
+        -webkit-overflow-scrolling: touch;
     }
     
     .container_img1 img, .container_img2 img {
