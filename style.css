@@ -505,6 +505,13 @@ p {
     background: none;
     border: none;
     z-index: 1002;
+    border-radius: 8px;
+    transition: all 0.3s ease; /* Aggiungo la stessa transizione di style.css */
+}
+
+.hamburger:hover {
+    background: #92a9af; /* Sfondo leggermente più scuro al hover */
+    transform: translateY(-1px);
 }
 
 .hamburger span {
@@ -516,7 +523,8 @@ p {
     border-radius: 2px;
 }
 
-.hamburger.active span:nth-child(1) {
+/* Rimuovo le trasformazioni che creavano la X dal menu hamburger */
+/* .hamburger.active span:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
 
@@ -526,7 +534,7 @@ p {
 
 .hamburger.active span:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
-}
+} */
 
 .mobile-menu {
     display: none;
@@ -587,6 +595,31 @@ p {
 .mobile-menu .dropdown-item:hover {
     background-color: #374650;
     color: #c2d0d4;
+}
+
+/* Stili per il bottone di chiusura del menu mobile - sempre attivi */
+.mobile-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #374650;
+    cursor: pointer;
+    z-index: 1003;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-close-btn:hover {
+    background-color: rgba(55, 70, 80, 0.1);
 }
 
 /* Responsive Design - Media Queries */
@@ -669,6 +702,11 @@ p {
         top: 15px;
         right: 15px;
         z-index: 1002;
+    }
+    
+    /* Nascondo il menu hamburger quando è attivo (quando il menu mobile è aperto) */
+    .hamburger.active {
+        display: none;
     }
     
     .dark-mode-container {

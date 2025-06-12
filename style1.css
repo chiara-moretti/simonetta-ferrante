@@ -585,11 +585,17 @@ p {
     }
     
     .hamburger {
-        display: flex;
+        display: flex !important;
         position: fixed;
         top: 15px;
         right: 15px;
         z-index: 1002;
+        background: #374650 !important;
+        border: none !important;
+    }
+    
+    .hamburger.active {
+        display: none !important;
     }
     
     .dark-mode-container {
@@ -667,31 +673,25 @@ p {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    padding: 10px;
-    background: none;
-    border: none;
+    padding: 12px;
+    background: #374650; /* Sfondo scuro come il tema dark mode */
+    border: none; /* Rimosso il bordo */
     z-index: 1002;
+    border-radius: 8px;
+    transition: all 0.3s ease; /* Aggiungo la stessa transizione di style.css */
+}
+
+.hamburger:hover {
+    background: #2c3740; /* Sfondo leggermente più scuro al hover */
+    transform: translateY(-1px);
 }
 
 .hamburger span {
     width: 25px;
     height: 3px;
-    background-color: #c2d0d4;
+    background-color: #c2d0d4; /* Linee del colore #c2d0d4 */
     margin: 3px 0;
-    transition: 0.3s;
     border-radius: 2px;
-}
-
-.hamburger.active span:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .mobile-menu {
@@ -753,6 +753,31 @@ p {
 .mobile-menu .dropdown-item:hover {
     background-color: #c2d0d4;
     color: #374650;
+}
+
+/* Stili per il bottone di chiusura del menu mobile - sempre attivi */
+.mobile-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #c2d0d4;
+    cursor: pointer;
+    z-index: 1003;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-close-btn:hover {
+    background-color: rgba(194, 208, 212, 0.1);
 }
 
 /* Responsive Design - Media Queries */

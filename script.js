@@ -279,12 +279,19 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', closeMobileMenu);
     });
     
+    // Chiudi il menu quando si clicca sul bottone di chiusura
+    const closeButton = document.querySelector('.mobile-close-btn');
+    if (closeButton) {
+        closeButton.addEventListener('click', closeMobileMenu);
+    }
+    
     // Chiudi il menu quando si clicca fuori
     document.addEventListener('click', function(event) {
         const hamburger = document.querySelector('.hamburger');
         const mobileMenu = document.querySelector('.mobile-menu');
+        const closeButton = document.querySelector('.mobile-close-btn');
         
-        if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+        if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target) && !closeButton.contains(event.target)) {
             closeMobileMenu();
         }
     });
