@@ -716,28 +716,6 @@ p {
         display: none; /* Nasconde il bottone dark mode su mobile */
     }
     
-    .pdf-viewer {
-        height: 90vh; /* Altezza quasi a schermo intero per contenere una pagina */
-        border-radius: 8px;
-        overflow: hidden; /* Nasconde lo scrolling interno */
-        -webkit-overflow-scrolling: touch;
-        position: relative;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    /* Assicura che l'iframe interno mostri una pagina alla volta */
-    .pdf-viewer iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-        overflow: hidden; /* Nasconde lo scrolling interno dell'iframe */
-        -webkit-overflow-scrolling: touch;
-        object-fit: contain;
-    }
-    
     .container_img1 img, .container_img2 img {
         max-width: 200px;
     }
@@ -802,5 +780,56 @@ p {
     .pdf-viewer {
         height: 85vh; /* Ancora più alto su schermi molto piccoli */
         border-radius: 10px;
+    }
+}
+
+/* Stili per l'immagine copertina mobile */
+.mobile-cover {
+    display: none; /* Nascosta di default su desktop */
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.mobile-cover img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stili specifici per mobile per il PDF viewer */
+@media screen and (max-width: 767px) {
+    /* Nasconde il PDF viewer su mobile */
+    .pdf-viewer {
+        display: none !important;
+    }
+    
+    /* Nasconde anche il contenitore del PDF */
+    #pdf-list {
+        display: none !important;
+    }
+    
+    /* Mostra l'immagine copertina su mobile */
+    .mobile-cover {
+        display: block;
+        margin: 20px 0;
+    }
+    
+    .mobile-cover img {
+        max-width: 300px;
+        border-radius: 8px;
+    }
+    
+    .mobile-cover .carousel-caption {
+        margin-top: 15px;
+        font-size: 12pt;
+        color: #374650;
+        background-color: transparent;
+        opacity: 1;
+        position: static;
+        transform: none;
+        padding: 10px 0;
     }
 }
